@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Cookie from "../assets/cookie.png";
+import Cookie from "../../assets/cookie.png";
 import styles from "./Cookieclicker.module.css";
 
 export default function CookieCounter() {

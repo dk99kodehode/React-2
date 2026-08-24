@@ -17,8 +17,8 @@ export default function CatPicture() {
 
   return (
     <>
-      <button onClick={fetchCat}>Refresh</button>
-      <img src={cat.message} alt="Random cat" />
+      <button onClick={fetchCat}>Want a different fact?</button>
+      <p>{cat.data[Math.floor(Math.random() * cat.data.length)].fact}</p>
     </>
   );
 }
