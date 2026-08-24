@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import CookieCounter from "./components/counter";
+import CookieCounter from "./components/Cookie-clicker/Counter";
 
 function App() {
   return (
