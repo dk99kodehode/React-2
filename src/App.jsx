@@ -1,13 +1,17 @@
 import { useState } from "react";
 import "./App.css";
-import CookieCounter from "./components/Cookie-clicker/Counter";
-import CatPicture from "./components/CatAPI/RandomCat";
+
+//
+import NavBar from "./components/NavBar";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <CookieCounter />
-      <CatPicture />
+      <div className="cookiecat">
+        <NavBar />
+        <Outlet />
+      </div>
     </>
   );
 }

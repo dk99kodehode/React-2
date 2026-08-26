@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function CatPicture() {
+export default function CatFact() {
   const [cat, setCat] = useState(null);
 
   const fetchCat = async () => {
@@ -13,8 +13,10 @@ export default function CatPicture() {
     fetchCat();
   }, []);
 
+  // visst ikke cat er loadet så h1... "loading"
   if (!cat) return <h1>Loading...</h1>;
 
+  // etter apien har renderet returner du en button med paragraph
   return (
     <>
       <button onClick={fetchCat}>Want a different fact?</button>
