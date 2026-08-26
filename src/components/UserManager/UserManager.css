@@ -9,11 +9,21 @@
 .userform {
   display: flex;
   flex-direction: row;
+  gap: 20px;
+  padding-bottom: 2%;
+}
+
+.userform h3 {
+  gap: -20px;
 }
 
 .users {
   display: flex;
   gap: 10px;
+}
+
+.new-user {
+  display: none;
 }
 
 .user-list {
