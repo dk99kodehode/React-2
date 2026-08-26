@@ -17,6 +17,11 @@ export default function UserManager() {
   function submitInfo(e) {
     e.preventDefault();
 
+    // if username or email is empty return to previous, so it never would be able to let you submit without filling
+    if (username === "" || email === "") {
+      return;
+    }
+
     // creates new user on submit with username and email
     const newUser = {
       username: username,

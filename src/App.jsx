@@ -8,10 +8,8 @@ import { Outlet } from "react-router-dom";
 function App() {
   return (
     <>
-      <div className="cookiecat">
-        <NavBar />
-        <Outlet />
-      </div>
+      <NavBar />
+      <Outlet />
     </>
   );
 }

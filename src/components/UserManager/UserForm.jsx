@@ -8,7 +8,6 @@ export default function UserForm({
   return (
     <form onSubmit={submitInfo}>
       <h3>username</h3>
-
       <input
         type="text"
         name="username"
@@ -16,9 +15,7 @@ export default function UserForm({
         onChange={(e) => setUsername(e.target.value)}
         placeholder="Username"
       />
-
       <h3>email</h3>
-
       <input
         type="email"
         name="email"
@@ -26,7 +23,6 @@ export default function UserForm({
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Email"
       />
-
       <button type="submit">Submit</button>
     </form>
   );
