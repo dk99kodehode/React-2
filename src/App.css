@@ -46,10 +46,6 @@
       scale(1.4);
   }
 
-  body {
-    margin: 0;
-  }
-
   .vite {
     z-index: 0;
     top: 107px;

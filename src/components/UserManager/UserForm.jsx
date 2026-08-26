@@ -1,3 +1,6 @@
+// styling
+import "./UserManager.css";
+
 export default function UserForm({
   username,
   email,
@@ -6,7 +9,7 @@ export default function UserForm({
   submitInfo,
 }) {
   return (
-    <form onSubmit={submitInfo}>
+    <form className="" onSubmit={submitInfo}>
       <h3>username</h3>
       <input
         type="text"

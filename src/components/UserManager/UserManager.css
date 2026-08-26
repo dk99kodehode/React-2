@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.userform {
+  display: flex;
+  flex-direction: row;
+}
+
+.users {
+  display: flex;
+  gap: 10px;
+}
+
+.user-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}

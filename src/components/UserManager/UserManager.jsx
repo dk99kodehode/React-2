@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+// styling
+import "./UserManager.css";
+
 // components && data
 import { mockData } from "./mockData";
 import UserForm from "./UserForm";
@@ -28,6 +31,7 @@ export default function UserManager() {
       email: email,
     };
 
+    // adds new user to list of submitted users
     setSubmittedUsers([...submittedUsers, newUser]);
 
     // clears username and email input after submit
@@ -36,22 +40,33 @@ export default function UserManager() {
   }
 
   return (
-    <div>
-      <UserForm
-        username={username}
-        email={email}
-        setUsername={setUsername}
-        setEmail={setEmail}
-        submitInfo={submitInfo}
-      />
-
+    <section className="container">
+      <h2>User Management</h2>
       <div>
-        <h2>User Management:</h2>
-
-        <UserList users={mockData} />
-
-        <SubmittedUser users={submittedUsers} />
+        <UserForm
+          className="userform"
+          username={username}
+          email={email}
+          setUsername={setUsername}
+          setEmail={setEmail}
+          submitInfo={submitInfo}
+        />
       </div>
-    </div>
+
+      <div className="users">
+        <div className="user-list">
+          <div>
+            <h2>Saved Users</h2>
+
+            <UserList users={mockData} />
+          </div>
+
+          <div>
+            <h2>New users</h2>
+            <SubmittedUser users={submittedUsers} />
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
