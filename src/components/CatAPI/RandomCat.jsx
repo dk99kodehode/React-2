@@ -3,12 +3,15 @@ import { useEffect, useState } from "react";
 export default function CatFact() {
   const [cat, setCat] = useState(null);
 
+  // fetches api and awaits json response, stores data in setCat(data)
+
   const fetchCat = async () => {
     const res = await fetch("https://catfact.ninja/facts?limit=5");
     const data = await res.json();
     setCat(data);
   };
 
+  // 1 time event that fetches the data on refresh or button click
   useEffect(() => {
     fetchCat();
   }, []);
