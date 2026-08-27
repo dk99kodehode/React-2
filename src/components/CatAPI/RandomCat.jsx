@@ -35,12 +35,17 @@ export default function CatFact() {
     <>
       <div className="random-cat">
         <div className="cat-info">
-          <p className="cat-fact">
-            {cat.facts[Math.floor(Math.random() * cat.facts.length)].fact}
-          </p>
-          <button className="cat-button" onClick={fetchCat}>
-            Want a different fact?
-          </button>
+          <div>
+            <p className="cat-fact">
+              {cat.facts[Math.floor(Math.random() * cat.facts.length)].fact}
+            </p>
+          </div>
+
+          <div>
+            <button className="cat-button" onClick={fetchCat}>
+              Want a different fact?
+            </button>
+          </div>
         </div>
 
         <div>

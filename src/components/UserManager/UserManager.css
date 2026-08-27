@@ -4,6 +4,9 @@
   align-items: center;
   flex-direction: column;
   margin: 0 auto;
+  border: rgb(255, 255, 255) 2px solid;
+  padding: 20px;
+  border-radius: 12px;
 }
 
 .userform {
@@ -20,9 +23,6 @@
 .users {
   display: flex;
   gap: 10px;
-}
-
-.new-user {
 }
 
 .user-list {

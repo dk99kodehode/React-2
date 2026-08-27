@@ -1,17 +1,33 @@
-.cookie {
-  width: 400px;
-  margin-top: 2%;
+.cookiecontainer {
+  display: grid;
+  grid-template-columns: 1fr 300px 1fr;
 }
 
-.cookie:active {
-  scale: 1.02;
-}
-
-.counter {
-  font-size: 24px;
+.cookieclicker {
+  grid-column: 2;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
 }
 
 .milk {
-  display: flex;
-  margin-left: auto;
+  grid-column: 3;
+}
+
+.cookie {
+  width: 300px;
+  aspect-ratio: 1 / 1;
+  padding-bottom: 20px;
+}
+
+.cookie:hover {
+  cursor: pointer;
+}
+
+.cookie:active {
+  scale: 1.008;
+}
+
+.counter {
+  margin: 0;
 }
