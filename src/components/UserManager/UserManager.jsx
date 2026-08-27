@@ -63,7 +63,7 @@ export default function UserManager() {
           </div>
 
           {/*-----NEW USERS------*/}
-          <div style={{ display: isVisible ? `block` : `none` }} id="new-user">
+          <div className="new-user" id="new-user">
             <h2>New users</h2>
             <SubmittedUser users={submittedUsers} />
           </div>

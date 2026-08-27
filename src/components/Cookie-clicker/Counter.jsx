@@ -24,6 +24,13 @@ export default function CookieCounter() {
         />
         <p className={styles.counter}>Cookies: {count}</p>
       </div>
+
+      <div className="milk">
+        <p>Milk</p>
+        <p>Strawberry Milk</p>
+        <p>Chocolate Milk</p>
+        <p>Banana Milk</p>
+      </div>
     </>
   );
 }
