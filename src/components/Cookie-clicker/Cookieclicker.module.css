@@ -10,10 +10,26 @@
   flex-direction: column;
 }
 
+/*-------MILK PARAGRAPH AND IMAGE-----*/
 .milk {
   grid-column: 3;
+  margin-left: 5rem;
 }
 
+.milk p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.milk img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* COOOKIE STYLING */
 .cookie {
   width: 300px;
   aspect-ratio: 1 / 1;
