@@ -34,9 +34,6 @@ export default function UserManager() {
     // adds new user to list of submitted users
     setSubmittedUsers([...submittedUsers, newUser]);
 
-    // changes submitted to true so the class is active , default value is false
-    setSubmitted(true);
-
     // clears username and email input after submit
     setUsername("");
     setEmail("");
@@ -56,6 +53,7 @@ export default function UserManager() {
         />
       </div>
 
+      {/*-----STORED USERS IN MOCKDATA------*/}
       <div className="users">
         <div className="user-list">
           <div>
@@ -64,7 +62,8 @@ export default function UserManager() {
             <UserList users={mockData} />
           </div>
 
-          <div className="new-user" id="new-user">
+          {/*-----NEW USERS------*/}
+          <div style={{ display: isVisible ? `block` : `none` }} id="new-user">
             <h2>New users</h2>
             <SubmittedUser users={submittedUsers} />
           </div>

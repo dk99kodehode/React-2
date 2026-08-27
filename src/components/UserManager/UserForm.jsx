@@ -9,8 +9,6 @@ export default function UserForm({
   setEmail,
   submitInfo,
 }) {
-  const [submitted, setSubmitted] = useState(false);
-
   return (
     <form className="userform" onSubmit={submitInfo}>
       <div>
@@ -33,14 +31,12 @@ export default function UserForm({
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email"
         />
-        <button
-          className={`new-user ${submitted ? "submitted" : ""}`}
-          type="submit"
-          onClick={() => setSubmitted(true)}
-        >
-          Submit
-        </button>
+        <button type="submit">Submit</button>
       </div>
     </form>
   );
 }
+
+//className={`new-user ${submitted ? "submitted" : ""}`
+// onClick={() => setSubmitted(true)
+// const [submitted, setSubmitted] = useState(false);
