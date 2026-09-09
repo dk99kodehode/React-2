@@ -18,14 +18,16 @@ export default function CookieCounter() {
     <>
       <div className={styles.cookiecontainer}>
         <div className={styles.cookieclicker}>
+          <div className={styles.cookiepersecond}>
+            <p className={styles.counter}>Cookies: {count}</p>
+            <p className={styles.counterps}>Cookies per second:____</p>
+          </div>
           <img
             className={styles.cookie}
             src={Cookie}
             onClick={increaseCount}
             alt="cookie-png"
           />
-
-          <p className={styles.counter}>Cookies: {count}</p>
         </div>
 
         <div className={styles.milk}>

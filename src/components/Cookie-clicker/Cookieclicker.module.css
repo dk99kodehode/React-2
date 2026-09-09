@@ -1,32 +1,37 @@
+body {
+  background: url(CookieAssets/CCBackground.png);
+  box-sizing: border-box;
+}
+
 .cookiecontainer {
   display: grid;
   grid-template-columns: 1fr 300px 1fr;
+  position: relative;
+  margin-top: 5%;
+
+  padding-left: 120px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+
+  border-image: url(WoodPole.png) 30 repeat;
+}
+
+.cookiecontainer::before {
+  content: "";
+  position: absolute;
+  transform: translateX(-50%);
+  top: 0;
+  left: 50%;
+  width: 20px;
+  bottom: 0;
+  background: url(WoodPole.png) repeat-y;
 }
 
 .cookieclicker {
-  grid-column: 2;
+  grid-column: 1;
   width: 300px;
   display: flex;
   flex-direction: column;
-}
-
-/*-------MILK PARAGRAPH AND IMAGE-----*/
-.milk {
-  grid-column: 3;
-  margin-left: 5rem;
-}
-
-.milk p {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 10px 0;
-}
-
-.milk img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
 }
 
 /* COOOKIE STYLING */
@@ -45,5 +50,45 @@
 }
 
 .counter {
+  font-size: 32px;
+}
+
+.counterps {
+  font-size: 16px;
+}
+.cookiepersecond {
   margin: 0;
+  margin-bottom: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  width: 520px;
+
+  padding: 10px;
+  margin-left: -40%;
+  font-size: 24px;
+}
+
+/*-------MILK PARAGRAPH -----*/
+.milk {
+  grid-column: 3;
+  margin-left: 5rem;
+}
+
+.milk p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  border: 2px solid rgb(246, 245, 245);
+  border-radius: 12px;
+}
+
+.milk p:hover {
+  cursor: pointer;
+}
+
+.milk img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
