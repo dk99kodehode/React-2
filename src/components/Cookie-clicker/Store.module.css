@@ -7,7 +7,8 @@
 .store p {
   display: flex;
   align-items: center;
-  gap: 10px;
+
+  width: 200px;
   margin: 10px 0;
   border: 2px solid rgb(246, 245, 245);
   border-radius: 12px;

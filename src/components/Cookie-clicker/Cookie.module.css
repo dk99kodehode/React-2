@@ -5,26 +5,61 @@ body {
 
 .cookiecontainer {
   display: grid;
-  grid-template-columns: repeat(4fr);
+  grid-template-columns: 1fr 1fr 1fr;
   position: relative;
   margin-top: 5%;
+  margin-left: 1%;
 
-  padding-left: 120px;
+  padding-left: 110px;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
 
   border-image: url(WoodPole.png) 30 repeat;
 }
 
-.cookiecontainer::before {
+.cookie {
+  width: 220px;
+  aspect-ratio: 1 / 1;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.CCcontainer {
+  width: 240px;
+  padding: 20px;
+  border-radius: 50%;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CCcontainer::before {
   content: "";
   position: absolute;
-  transform: translateX(-50%);
-  top: 0;
-  left: 50%;
-  width: 20px;
-  bottom: 0;
-  background: url(WoodPole.png) repeat-y;
+  inset: 0;
+  border-radius: 50%;
+  background-color: white;
+
+  animation: spinBackground 1s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes spinBackground {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(1.12) rotate(180deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(360deg);
+    background-color: rgb(157, 148, 148);
+  }
 }
 
 .cookieclicker {
@@ -61,7 +96,7 @@ body {
   margin-bottom: 1rem;
   background-color: rgba(0, 0, 0, 0.4);
   color: white;
-  width: 520px;
+  width: 560px;
 
   padding: 10px;
   margin-left: -40%;

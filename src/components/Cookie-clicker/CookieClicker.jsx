@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 import styles from "./Cookie.module.css";
-import storestyles from "./Store.module.css";
 
 // components og styling
 import Cookie from "../../assets/cookie.png";
-import { milk, chocolateMilk, strawberryMilk } from "./CookieAssets/milkassets";
+import Store from "./Store";
+import Farms from "./Farms";
 
-export default function CookieCounter() {
+export default function CookieClicker() {
   const [count, setCount] = useState(0);
 
   // usestate 0
@@ -34,23 +34,9 @@ export default function CookieCounter() {
           </div>
         </div>
 
-        <div className={storestyles.store}>
-          <h2>STORE</h2>
-          <div className={storestyles.milk}>
-            <p>
-              <img src={milk} alt="milk-img" />
-              Milk
-            </p>
-            <p>
-              <img src={strawberryMilk} alt="strawberryMilk-img" />
-              Strawberry Milk
-            </p>
-            <p>
-              <img src={chocolateMilk} alt="chocolateMilk-img" />
-              Chocolate Milk
-            </p>
-          </div>
-        </div>
+        <Farms />
+
+        <Store />
       </div>
     </>
   );

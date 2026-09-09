@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import App from "../App";
-import CookieCounter from "../components/Cookie-clicker/Counter";
 import CatFact from "../components/CatAPI/RandomCat";
 import UserManager from "../components/UserManager/UserManager";
+import CookieClicker from "../components/Cookie-clicker/CookieClicker";
 
 export const router = createBrowserRouter([
   {
@@ -12,7 +12,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <CookieCounter />,
+        element: <CookieClicker />,
       },
       {
         path: "cat",
