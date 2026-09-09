@@ -1,14 +1,26 @@
 body {
-  background: url(CookieAssets/CCBackground.png);
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  opacity: 0.4;
+  background: url("CookieAssets/CCBackground.png") center / 100% auto fixed
+    no-repeat;
   box-sizing: border-box;
+  inset: 0;
 }
 
 .cookiecontainer {
   display: grid;
+  width: 88%;
   grid-template-columns: 1fr 1fr 1fr;
   position: relative;
+
   margin-top: 5%;
-  margin-left: 1%;
+  margin-left: 15px;
 
   padding-left: 110px;
   border-left: 20px solid transparent;
@@ -23,6 +35,17 @@ body {
   padding-bottom: 20px;
   position: relative;
   z-index: 1;
+}
+
+.bakery {
+  width: 300px;
+  padding: 5px;
+  border-radius: 30px;
+
+  border: none;
+  text-align: center;
+  background-color: white;
+  margin-bottom: 2%;
 }
 
 .CCcontainer {
@@ -50,6 +73,7 @@ body {
 @keyframes spinBackground {
   0% {
     transform: scale(1) rotate(0deg);
+    background-color: rgb(141, 61, 12);
   }
 
   50% {
@@ -58,7 +82,7 @@ body {
 
   100% {
     transform: scale(1) rotate(360deg);
-    background-color: rgb(157, 148, 148);
+    background-color: rgb(141, 61, 12);
   }
 }
 
@@ -81,11 +105,14 @@ body {
 }
 
 .cookie:active {
-  scale: 1.008;
+  scale: 0.95;
 }
 
 .counter {
-  font-size: 32px;
+  font-size: 38px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .counterps {

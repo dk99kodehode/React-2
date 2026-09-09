@@ -20,9 +20,17 @@ export default function CookieClicker() {
     <>
       <div className={styles.cookiecontainer}>
         <div className={styles.cookieclicker}>
+          <input
+            className={styles.bakery}
+            type="text"
+            placeholder="Daniels bakery"
+          />
           <div className={styles.cookiepersecond}>
-            <p className={styles.counter}>Cookies: {count}</p>
-            <p className={styles.counterps}>Cookies per second:____</p>
+            <p className={styles.counter}>
+              <span>{count}</span>
+              <span>cookies</span>
+            </p>
+            <p className={styles.counterps}>per second:____</p>
           </div>
           <div className={styles.CCcontainer}>
             <img

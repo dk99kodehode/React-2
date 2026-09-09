@@ -1,7 +1,18 @@
 /*-------MILK PARAGRAPH -----*/
 .store {
   grid-column: 3;
-  margin-left: 5rem;
+}
+
+.storeOverhead {
+  height: 40px;
+  background-color: rgb(14, 3, 34);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  border-bottom: 20px solid transparent;
+
+  border-image: url("WoodPole.png") 20 repeat;
 }
 
 .store p {
