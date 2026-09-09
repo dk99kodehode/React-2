@@ -1,8 +1,10 @@
 import { useState } from "react";
 
+import styles from "./Cookie.module.css";
+import storestyles from "./Store.module.css";
+
 // components og styling
 import Cookie from "../../assets/cookie.png";
-import styles from "./Cookieclicker.module.css";
 import { milk, chocolateMilk, strawberryMilk } from "./CookieAssets/milkassets";
 
 export default function CookieCounter() {
@@ -22,27 +24,32 @@ export default function CookieCounter() {
             <p className={styles.counter}>Cookies: {count}</p>
             <p className={styles.counterps}>Cookies per second:____</p>
           </div>
-          <img
-            className={styles.cookie}
-            src={Cookie}
-            onClick={increaseCount}
-            alt="cookie-png"
-          />
+          <div className={styles.CCcontainer}>
+            <img
+              className={styles.cookie}
+              src={Cookie}
+              onClick={increaseCount}
+              alt="cookie-png"
+            />
+          </div>
         </div>
 
-        <div className={styles.milk}>
-          <p>
-            <img src={milk} alt="milk-img" />
-            Milk
-          </p>
-          <p>
-            <img src={strawberryMilk} alt="strawberryMilk-img" />
-            Strawberry Milk
-          </p>
-          <p>
-            <img src={chocolateMilk} alt="chocolateMilk-img" />
-            Chocolate Milk
-          </p>
+        <div className={storestyles.store}>
+          <h2>STORE</h2>
+          <div className={storestyles.milk}>
+            <p>
+              <img src={milk} alt="milk-img" />
+              Milk
+            </p>
+            <p>
+              <img src={strawberryMilk} alt="strawberryMilk-img" />
+              Strawberry Milk
+            </p>
+            <p>
+              <img src={chocolateMilk} alt="chocolateMilk-img" />
+              Chocolate Milk
+            </p>
+          </div>
         </div>
       </div>
     </>

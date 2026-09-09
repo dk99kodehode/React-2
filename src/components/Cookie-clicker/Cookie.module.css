@@ -5,7 +5,7 @@ body {
 
 .cookiecontainer {
   display: grid;
-  grid-template-columns: 1fr 300px 1fr;
+  grid-template-columns: repeat(4fr);
   position: relative;
   margin-top: 5%;
 
@@ -36,7 +36,7 @@ body {
 
 /* COOOKIE STYLING */
 .cookie {
-  width: 300px;
+  width: 220px;
   aspect-ratio: 1 / 1;
   padding-bottom: 20px;
 }
@@ -66,29 +66,4 @@ body {
   padding: 10px;
   margin-left: -40%;
   font-size: 24px;
-}
-
-/*-------MILK PARAGRAPH -----*/
-.milk {
-  grid-column: 3;
-  margin-left: 5rem;
-}
-
-.milk p {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 10px 0;
-  border: 2px solid rgb(246, 245, 245);
-  border-radius: 12px;
-}
-
-.milk p:hover {
-  cursor: pointer;
-}
-
-.milk img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
 }
