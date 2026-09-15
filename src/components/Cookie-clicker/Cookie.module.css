@@ -1,5 +1,6 @@
 body {
   position: relative;
+  justify-content: center;
 }
 
 body::before {
@@ -13,16 +14,33 @@ body::before {
   inset: 0;
 }
 
+.title {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 1540px;
+  height: 100px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  border-bottom: 20px solid transparent;
+
+  border-image: url(WoodPole.png) 30 repeat;
+}
+
+.title h2 {
+  font-size: 48px;
+}
+
 .cookiecontainer {
   display: grid;
-  width: 88%;
+  width: 95%;
+  max-width: 1460px;
   grid-template-columns: 1fr 1fr 1fr;
   position: relative;
 
-  margin-top: 5%;
   margin-left: 15px;
 
-  padding-left: 110px;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
 
@@ -41,10 +59,13 @@ body::before {
   width: 300px;
   padding: 5px;
   border-radius: 30px;
+  margin-top: 5%;
 
+  margin-left: 24%;
   border: none;
   text-align: center;
   background-color: white;
+  color: black;
   margin-bottom: 2%;
 }
 
@@ -52,6 +73,7 @@ body::before {
   width: 240px;
   padding: 20px;
   border-radius: 50%;
+  margin-left: 30%;
   position: relative;
 
   display: flex;
@@ -63,27 +85,6 @@ body::before {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 50%;
-  background-color: white;
-
-  animation: spinBackground 1s ease-in-out infinite;
-  z-index: 0;
-}
-
-@keyframes spinBackground {
-  0% {
-    transform: scale(1) rotate(0deg);
-    background-color: rgb(141, 61, 12);
-  }
-
-  50% {
-    transform: scale(1.12) rotate(180deg);
-  }
-
-  100% {
-    transform: scale(1) rotate(360deg);
-    background-color: rgb(141, 61, 12);
-  }
 }
 
 .cookieclicker {
@@ -95,7 +96,7 @@ body::before {
 
 /* COOOKIE STYLING */
 .cookie {
-  width: 220px;
+  width: 280px;
   aspect-ratio: 1 / 1;
   padding-bottom: 20px;
 }
@@ -123,9 +124,9 @@ body::before {
   margin-bottom: 1rem;
   background-color: rgba(0, 0, 0, 0.4);
   color: white;
-  width: 560px;
+  width: 480px;
 
   padding: 10px;
-  margin-left: -40%;
+
   font-size: 24px;
 }

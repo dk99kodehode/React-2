@@ -5,7 +5,7 @@
 
 .storeOverhead {
   height: 40px;
-  background-color: rgb(14, 3, 34);
+  background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -15,14 +15,8 @@
   border-image: url("WoodPole.png") 20 repeat;
 }
 
-.store p {
-  display: flex;
-  align-items: center;
-
-  width: 200px;
-  margin: 10px 0;
-  border: 2px solid rgb(246, 245, 245);
-  border-radius: 12px;
+.storeOverhead h2 {
+  font-size: 32px;
 }
 
 .store p:hover {

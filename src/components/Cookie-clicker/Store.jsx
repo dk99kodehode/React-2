@@ -1,5 +1,6 @@
+import { upgrades } from "./CookieAssets/upgrades";
 import storestyles from "./Store.module.css";
-import { milk, chocolateMilk, strawberryMilk } from "./CookieAssets/milkassets";
+import { Upgrade } from "./Upgrade";
 
 export default function Store() {
   return (
@@ -7,19 +8,16 @@ export default function Store() {
       <div className={storestyles.storeOverhead}>
         <h2>STORE</h2>
       </div>
-      <div className={storestyles.milk}>
-        <p>
-          <img src={milk} alt="milk-img" />
-          Milk
-        </p>
-        <p>
-          <img src={strawberryMilk} alt="strawberryMilk-img" />
-          Strawberry Milk
-        </p>
-        <p>
-          <img src={chocolateMilk} alt="chocolateMilk-img" />
-          Chocolate Milk
-        </p>
+
+      <div>
+        {upgrades.map((upgrade, index) => (
+          <Upgrade
+            key={index}
+            title={upgrade.name}
+            image={upgrade.image}
+            price={upgrade.price}
+          />
+        ))}
       </div>
     </div>
   );

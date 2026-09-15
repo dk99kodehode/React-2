@@ -15,15 +15,3 @@
   border-right: 20px solid transparent;
   border-image: url("WoodPole.png") 30 repeat;
 }
-
-.farms::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background: url("CookieAssets/CCBackground.png") center / 100% auto fixed
-    no-repeat;
-  opacity: 0.8;
-
-  z-index: 0;
-}
