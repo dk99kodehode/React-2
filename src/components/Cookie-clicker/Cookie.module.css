@@ -25,7 +25,7 @@ body::before {
 
   border-bottom: 20px solid transparent;
 
-  border-image: url(WoodPole.png) 30 repeat;
+  border-image: url(WoodP-V.png) 30 repeat;
 }
 
 .title h2 {
@@ -44,7 +44,7 @@ body::before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
 
-  border-image: url(WoodPole.png) 30 repeat;
+  border-image: url(WoodP-H.png) 30 repeat;
 }
 
 .cookie {
