@@ -60,12 +60,14 @@ body::before {
   padding: 5px;
   border-radius: 30px;
   margin-top: 5%;
+  font-size: 32px;
 
-  margin-left: 24%;
+  margin-left: 25%;
   border: none;
   text-align: center;
-  background-color: white;
-  color: black;
+  background-color: transparent;
+
+  color: white;
   margin-bottom: 2%;
 }
 
