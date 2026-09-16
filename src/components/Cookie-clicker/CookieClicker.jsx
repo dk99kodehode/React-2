@@ -18,10 +18,6 @@ export default function CookieClicker() {
   };
   return (
     <>
-      <div className={styles.title}>
-        <h2>Cookie Clicker</h2>
-      </div>
-
       <div className={styles.cookiecontainer}>
         <div className={styles.cookieclicker}>
           <input
@@ -40,7 +36,9 @@ export default function CookieClicker() {
             <img
               className={styles.cookie}
               src={Cookie}
-              onClick={increaseCount}
+              onClick={() => {
+                increaseCount;
+              }}
               alt="cookie-png"
             />
           </div>

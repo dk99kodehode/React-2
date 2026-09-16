@@ -1,6 +1,8 @@
 body {
-  position: relative;
-  justify-content: center;
+  place-content: center;
+  margin: 0;
+  display: grid;
+  min-height: 100vh;
 }
 
 body::before {
@@ -22,10 +24,6 @@ body::before {
   align-items: center;
   display: flex;
   justify-content: center;
-
-  border-bottom: 20px solid transparent;
-
-  border-image: url(WoodP-V.png) 30 repeat;
 }
 
 .title h2 {
@@ -35,9 +33,12 @@ body::before {
 .cookiecontainer {
   display: grid;
   width: 95%;
-  max-width: 1460px;
-  grid-template-columns: 1fr 1fr 1fr;
+  height: 580px;
+  max-width: 100%;
+  grid-template-columns: 550px 600px 300px;
   position: relative;
+
+  overflow: hidden;
 
   margin-left: 15px;
 
@@ -51,6 +52,7 @@ body::before {
   width: 220px;
   aspect-ratio: 1 / 1;
   padding-bottom: 20px;
+  margin-left: 29%;
   position: relative;
   z-index: 1;
 }
@@ -62,7 +64,7 @@ body::before {
 
   font-size: 32px;
 
-  margin-left: 25%;
+  margin-left: 42%;
   border: none;
   text-align: center;
   background-color: transparent;
@@ -98,7 +100,7 @@ body::before {
 
 /* COOOKIE STYLING */
 .cookie {
-  width: 280px;
+  width: 350px;
   aspect-ratio: 1 / 1;
   padding-bottom: 20px;
 }
@@ -126,7 +128,7 @@ body::before {
   margin-bottom: 1rem;
   background-color: rgba(0, 0, 0, 0.4);
   color: white;
-  width: 480px;
+  width: 550px;
 
   padding: 10px;
 

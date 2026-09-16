@@ -5,19 +5,22 @@ export function Upgrade({ title, image, price }) {
     <section style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
       <div
         style={{
-          backgroundColor: "black",
+          backgroundColor: "#050505",
           display: "flex",
-          height: "90px",
+          height: "100px",
           flexDirection: "row",
-          gap: "100px",
+          gap: "60px",
           alignItems: "center",
         }}
       >
+        <img
+          style={{ paddingLeft: "24px", objectFit: "contain" }}
+          src={image}
+          alt={title}
+        />
+
         <div>
-          <img style={{ paddingLeft: "24px" }} src={image} alt={title} />
-        </div>
-        <div>
-          <h3 style={{ fontSize: "24px" }}>??????</h3>
+          <h3 style={{ fontSize: "24px", color: "white" }}>??????</h3>
           <p style={{ color: "gold" }}>{price}</p>
         </div>
       </div>
