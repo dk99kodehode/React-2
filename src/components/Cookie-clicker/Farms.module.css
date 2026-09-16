@@ -18,6 +18,13 @@
   border-bottom: 20px solid transparent;
 }
 
+.settings {
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-image: url("WoodP-V.png") 30 repeat;
+  height: 160px;
+}
+
 .unit {
   width: 100%;
   background-color: rgb(137, 133, 133);
@@ -28,5 +35,5 @@
   border: 2px solid black;
   border-radius: 12px;
   height: 100px;
-  margin-bottom: 2px;
+  margin-top: 12px;
 }
