@@ -10,6 +10,27 @@ export default function Store() {
         <h2>STORE</h2>
       </div>
 
+      <div style={{ backgroundColor: "black", paddingBottom: "5px" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            paddingBottom: "5px",
+            alignItems: "center",
+            marginLeft: "auto",
+            marginRight: "100px",
+          }}
+        >
+          <button className={storestyles.buynsell}>Buy</button>
+          <button className={storestyles.buynsell}>Sell</button>
+          <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
+            <button className={storestyles.buynsell}>1</button>
+            <button className={storestyles.buynsell}>10</button>
+            <button className={storestyles.buynsell}>100</button>
+          </div>
+        </div>
+      </div>
+
       <div>
         {upgrades.map((upgrade, index) => (
           <Upgrade
