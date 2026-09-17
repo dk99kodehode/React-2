@@ -36,9 +36,7 @@ export default function CookieClicker() {
             <img
               className={styles.cookie}
               src={Cookie}
-              onClick={() => {
-                increaseCount;
-              }}
+              onClick={increaseCount}
               alt="cookie-png"
             />
           </div>

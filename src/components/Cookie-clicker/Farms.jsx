@@ -13,24 +13,8 @@ export default function Farms() {
               marginLeft: "2px",
             }}
           >
-            <button
-              style={{
-                padding: "10px",
-                backgroundColor: "brown",
-                borderRadius: "20px",
-              }}
-            >
-              Options
-            </button>
-            <button
-              style={{
-                padding: "10px",
-                backgroundColor: "brown",
-                borderRadius: "20px",
-              }}
-            >
-              Stats
-            </button>
+            <button className={styles.Buttons}>Options</button>
+            <button className={styles.Buttons}>Stats</button>
           </div>
 
           <div
@@ -45,24 +29,8 @@ export default function Farms() {
           <div
             style={{ flexDirection: "column", display: "flex", gap: "20px" }}
           >
-            <button
-              style={{
-                padding: "10px",
-                backgroundColor: "brown",
-                borderRadius: "20px",
-              }}
-            >
-              Info
-            </button>
-            <button
-              style={{
-                padding: "10px",
-                backgroundColor: "brown",
-                borderRadius: "20px",
-              }}
-            >
-              Legacy
-            </button>
+            <button className={styles.Buttons}>Info</button>
+            <button className={styles.Buttons}>Legacy</button>
           </div>
         </div>
       </div>
