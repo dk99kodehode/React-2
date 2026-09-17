@@ -1,3 +1,4 @@
+import { data } from "react-router-dom";
 import { upgrades } from "./CookieAssets/upgrades";
 import storestyles from "./Store.module.css";
 import { Upgrade } from "./Upgrade";

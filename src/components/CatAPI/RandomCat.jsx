@@ -9,8 +9,12 @@ export default function CatFact() {
 
   const fetchCat = async () => {
     const factres = await fetch("https://catfact.ninja/facts?limit=5");
+    const Imageres = await fetch(
+      "https://api.thecatapi.com/v1/images/search?limit=5",
+    );
 
     const Catfact = await factres.json();
+    const ImageData = await Imageres.json();
 
     setCat({
       facts: Catfact.data,
@@ -42,6 +46,10 @@ export default function CatFact() {
               Want a different fact?
             </button>
           </div>
+        </div>
+
+        <div>
+          <img className="random-cat-image" src={cat.image} alt="random-cat" />
         </div>
       </div>
     </>
