@@ -25,6 +25,14 @@
   color: white;
   width: 40px;
   gap: 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.buynsell:active {
+  text-shadow:
+    1px 1px 10px #fff,
+    1px 1px 10px #ccc;
 }
 
 .store p:hover {

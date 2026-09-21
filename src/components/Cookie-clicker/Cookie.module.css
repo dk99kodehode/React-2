@@ -134,3 +134,26 @@ body::before {
 
   font-size: 24px;
 }
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+  width: calc(100% + 40px);
+  height: 100px;
+
+  background-repeat: repeat-x;
+  background-size: auto 100px;
+
+  animation: wavy 12s linear infinite;
+}
+
+@keyframes wavy {
+  0% {
+    background-position-x: 1000px;
+  }
+
+  100% {
+    background-position-x: 0;
+  }
+}

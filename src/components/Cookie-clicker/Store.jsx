@@ -14,16 +14,21 @@ export default function Store() {
         <div
           style={{
             display: "flex",
-            flexDirection: "column",
-            paddingBottom: "5px",
-            alignItems: "center",
-            marginLeft: "auto",
-            marginRight: "100px",
+            marginLeft: "22px",
+            padding: "5px",
+            gap: "10px",
           }}
         >
           <button className={storestyles.buynsell}>Buy</button>
           <button className={storestyles.buynsell}>Sell</button>
-          <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              gap: "20px",
+              marginLeft: "10px",
+            }}
+          >
             <button className={storestyles.buynsell}>1</button>
             <button className={storestyles.buynsell}>10</button>
             <button className={storestyles.buynsell}>100</button>

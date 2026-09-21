@@ -50,8 +50,3 @@
 
   background: url(WoodBack.png);
 }
-
-.Buttons:hover {
-  cursor: pointer;
-  scale: 1.02;
-}

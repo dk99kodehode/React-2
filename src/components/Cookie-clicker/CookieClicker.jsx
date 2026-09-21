@@ -6,6 +6,7 @@ import styles from "./Cookie.module.css";
 import Cookie from "../../assets/cookie.png";
 import Store from "./Store";
 import Farms from "./Farms";
+import Wave from "./Wave";
 
 export default function CookieClicker() {
   const [count, setCount] = useState(0);
@@ -39,6 +40,8 @@ export default function CookieClicker() {
               onClick={increaseCount}
               alt="cookie-png"
             />
+
+            <Wave />
           </div>
         </div>
 
