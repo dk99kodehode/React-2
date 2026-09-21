@@ -41,6 +41,7 @@ export function Upgrade({ title, image, price }) {
         style={{
           marginLeft: "55px",
           display: "flex",
+          marginTop: "20px",
           flexDirection: "column",
           alignItems: "flex-start",
         }}
