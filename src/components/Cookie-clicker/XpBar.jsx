@@ -2,24 +2,32 @@ export default function XpBar() {
   return (
     <div
       style={{
-        backgroundColor: "grey",
-        height: "10px",
-        marginTop: "5px",
         width: "95%",
-        marginLeft: "10px",
-        borderRadius: "12px",
+        height: "12px",
+
+        position: "relative",
+        margin: "10px auto 4px auto",
+        backgroundColor: "grey",
+        height: "12px",
+
+        borderRadius: "10px",
         overflow: "hidden",
-        marginBottom: "4px",
       }}
     >
-      <div
+      <p
         style={{
-          backgroundImage:
-            "repeating-linear-gradient(to right, grey 0, grey 48px, black 48px, black 50px)",
+          position: "absolute",
+          inset: 0,
+          margin: 0,
+          fontSize: "12px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          whiteSpace: "nowrap",
         }}
       >
         0 / 1000
-      </div>
+      </p>
     </div>
   );
 }
