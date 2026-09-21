@@ -12,6 +12,7 @@ export default function Farms() {
               display: "flex",
               gap: "20px",
               marginLeft: "2px",
+              marginTop: "5px",
             }}
           >
             <button className={styles.Buttons}>Options</button>
@@ -28,7 +29,12 @@ export default function Farms() {
           </div>
 
           <div
-            style={{ flexDirection: "column", display: "flex", gap: "20px" }}
+            style={{
+              flexDirection: "column",
+              display: "flex",
+              gap: "20px",
+              marginTop: "5px",
+            }}
           >
             <button className={styles.Buttons}>Info</button>
             <button className={styles.Buttons}>Legacy</button>
@@ -39,7 +45,6 @@ export default function Farms() {
       </div>
 
       <div className={styles.farmBorder}>
-        <div className={styles.unit}></div>
         <div className={styles.unit}></div>
         <div className={styles.unit}></div>
         <div className={styles.unit}></div>
