@@ -1,4 +1,5 @@
 import styles from "./Farms.module.css";
+import XpBar from "./XpBar.jsx";
 
 export default function Farms() {
   return (
@@ -33,6 +34,8 @@ export default function Farms() {
             <button className={styles.Buttons}>Legacy</button>
           </div>
         </div>
+
+        <XpBar />
       </div>
 
       <div className={styles.farmBorder}>

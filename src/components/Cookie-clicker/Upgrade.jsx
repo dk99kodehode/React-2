@@ -7,11 +7,12 @@ export function Upgrade({ title, image, price }) {
         style={{
           backgroundColor: "#6f6a6a",
           display: "flex",
-          height: "70px",
+          height: "55px",
+          paddingBottom: "20px",
           flexDirection: "row",
           gap: "40px",
           alignItems: "center",
-          marginBottom: "3px",
+
           marginTop: "10px",
         }}
       >
@@ -20,6 +21,7 @@ export function Upgrade({ title, image, price }) {
             objectFit: "contain",
             width: "70px",
             overflow: "hidden",
+            paddingTop: "20px",
             height: "auto",
             opacity: "0.6",
           }}
@@ -47,6 +49,7 @@ export function Upgrade({ title, image, price }) {
               fontFamily: "Gobits",
               margin: 0,
               color: "#9ba5b5",
+              marginTop: "22px",
             }}
           >
             0
