@@ -1,9 +1,20 @@
-import { data } from "react-router-dom";
+import { useState } from "react";
 import { upgrades } from "./CookieAssets/upgrades";
 import storestyles from "./Store.module.css";
 import { Upgrade } from "./Upgrade";
 
 export default function Store() {
+  const [upgradeUnits, setUpgradeUnits] = useState(
+    upgrades.map((upgrade) => upgrade.units),
+  );
+
+  // increases units by 1
+  const increaseUnits = (index) => {
+    setUpgradeUnits((prevUnits) =>
+      prevUnits.map((units, i) => (i === index ? units + 1 : units)),
+    );
+  };
+
   return (
     <div className={storestyles.store}>
       <div className={storestyles.storeOverhead}>
@@ -21,6 +32,7 @@ export default function Store() {
         >
           <button className={storestyles.buynsell}>Buy</button>
           <button className={storestyles.buynsell}>Sell</button>
+
           <div
             style={{
               display: "flex",
@@ -43,7 +55,8 @@ export default function Store() {
             title={upgrade.name}
             image={upgrade.image}
             price={upgrade.price}
-            units={upgrade.units}
+            units={upgradeUnits[index]}
+            increaseUnits={() => increaseUnits(index)}
           />
         ))}
       </div>

@@ -1,9 +1,10 @@
 import storestyles from "./Store.module.css";
 import UnitBackground from "./CookieAssets/buildings/UnitBackground.png";
 
-export function Upgrade({ title, image, price, units }) {
+export function Upgrade({ title, image, price, units, increaseUnits }) {
   return (
     <div
+      onClick={increaseUnits}
       style={{
         backgroundImage: `url(${UnitBackground})`,
         backgroundSize: "cover",
@@ -63,7 +64,7 @@ export function Upgrade({ title, image, price, units }) {
             margin: 0,
           }}
         >
-          {`🍪 ${price}`}
+          {price}
         </p>
       </div>
 
