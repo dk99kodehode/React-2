@@ -28,13 +28,16 @@ export default function Store() {
         <h2>STORE</h2>
       </div>
 
-      <div style={{ backgroundColor: "black", paddingBottom: "5px" }}>
+      <div
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.7)", paddingBottom: "5px" }}
+      >
         <div
           style={{
             display: "flex",
             marginLeft: "22px",
             padding: "5px",
             gap: "10px",
+            textAlign: "center",
           }}
         >
           <button className={storestyles.buynsell}>Buy</button>

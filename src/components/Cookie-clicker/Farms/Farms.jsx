@@ -16,6 +16,7 @@ export default function Farms() {
             style={{
               flexDirection: "column",
               display: "flex",
+
               gap: "20px",
               marginLeft: "2px",
               marginTop: "5px",

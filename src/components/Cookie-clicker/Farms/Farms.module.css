@@ -16,6 +16,7 @@
 .farmborder {
   border-image: url(../CookieAssets/WoodP-V.png) 30 repeat;
   border-bottom: 20px solid transparent;
+
   flex-shrink: 0;
 }
 

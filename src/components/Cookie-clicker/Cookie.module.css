@@ -48,9 +48,9 @@ body::before {
 }
 
 .cookie {
-  width: 220px;
+  width: 200px;
   aspect-ratio: 1 / 1;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   margin-left: 29%;
   position: relative;
   z-index: 1;
@@ -99,13 +99,28 @@ body::before {
 
 /* COOOKIE STYLING */
 .cookie {
-  width: 350px;
+  width: 300px;
   aspect-ratio: 1 / 1;
-  padding-bottom: 20px;
+  padding-bottom: 100px;
 }
 
 .cookie:hover {
   cursor: pointer;
+  animation: cookiefied 3s infinite;
+}
+
+@keyframes cookiefied {
+  0% {
+    scale: 1;
+  }
+
+  75% {
+    scale: 1.04;
+  }
+
+  100% {
+    scale: 1;
+  }
 }
 
 .cookie:active {
@@ -137,22 +152,26 @@ body::before {
 .wave {
   position: absolute;
   bottom: 0;
-  left: -20px;
-  width: calc(100% + 40px);
-  height: 100px;
+
+  z-index: 1;
+
+  width: 540px;
+  height: 200px;
+
+  background-image: url("CookieAssets/Wave.png");
 
   background-repeat: repeat-x;
-  background-size: auto 100px;
+  background-size: 1200px 200px;
 
-  animation: wavy 12s linear infinite;
+  animation: wave 8s linear infinite;
 }
 
-@keyframes wavy {
-  0% {
-    background-position-x: 1000px;
+@keyframes wave {
+  from {
+    background-position-x: 0;
   }
 
-  100% {
-    background-position-x: 0;
+  to {
+    background-position-x: -1200px;
   }
 }
