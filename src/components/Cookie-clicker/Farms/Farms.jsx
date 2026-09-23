@@ -1,7 +1,13 @@
 import styles from "./Farms.module.css";
 import XpBar from "../Skilltree/XpBar.jsx";
 
+// change pages
+import { useState } from "react";
+import Statsheet from "../Stats/Statsheet.jsx";
+
 export default function Farms() {
+  const [middlePage, setMiddlePage] = useState("farms");
+
   return (
     <div className={styles.farms}>
       <div className={styles.settings}>
@@ -16,7 +22,14 @@ export default function Farms() {
             }}
           >
             <button className={styles.Buttons}>Options</button>
-            <button className={styles.Buttons}>Stats</button>
+            <button
+              onClick={() => {
+                setMiddlePage("stats");
+              }}
+              className={styles.Buttons}
+            >
+              Stats
+            </button>
           </div>
 
           <div
@@ -44,11 +57,18 @@ export default function Farms() {
         <XpBar />
       </div>
 
+      {/* MIDDLE */}
       <div className={styles.farmBorder}>
-        <div className={styles.unit}></div>
-        <div className={styles.unit}></div>
-        <div className={styles.unit}></div>
-        <div className={styles.unit}></div>
+        {middlePage === "farms" && (
+          <>
+            <div className={styles.unit}></div>
+            <div className={styles.unit}></div>
+            <div className={styles.unit}></div>
+            <div className={styles.unit}></div>
+          </>
+        )}
+
+        {middlePage === "stats" && <Statsheet setMiddlePage={setMiddlePage} />}
       </div>
     </div>
   );
