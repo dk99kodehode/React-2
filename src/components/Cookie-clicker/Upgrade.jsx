@@ -1,7 +1,7 @@
 import storestyles from "./Store.module.css";
 import UnitBackground from "./CookieAssets/buildings/UnitBackground.png";
 
-export function Upgrade({ title, image, price }) {
+export function Upgrade({ title, image, price, units }) {
   return (
     <div
       style={{
@@ -63,7 +63,7 @@ export function Upgrade({ title, image, price }) {
             margin: 0,
           }}
         >
-          {price}
+          {`🍪 ${price}`}
         </p>
       </div>
 
@@ -88,7 +88,7 @@ export function Upgrade({ title, image, price }) {
             color: "#9ba5b5",
           }}
         >
-          5
+          {units}
         </p>
       </div>
     </div>

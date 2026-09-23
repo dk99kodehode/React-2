@@ -16,26 +16,41 @@ export const upgrades = [
   {
     name: "Cursor",
     image: Clicker,
-    price: "🍪15",
+    price: 15,
+
+    cps: 0.1,
+    units: 0,
   },
   {
     name: "Grandma",
     image: Grandma,
-    price: "🍪100",
+    price: 100,
+
+    cps: 1,
+    units: 0,
   },
   {
     name: "Farm",
     image: Farm,
-    price: "🍪1,100",
+    price: 1100,
+
+    cps: 8,
+    units: 0,
   },
   {
     name: "Mine",
     image: Mine,
-    price: "🍪12,000",
+    price: 12000,
+
+    cps: 47,
+    units: 0,
   },
   {
     name: "Factory",
     image: Factory,
-    price: "🍪130,000",
+    price: 130000,
+
+    cps: 260,
+    units: 0,
   },
 ];

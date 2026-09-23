@@ -43,6 +43,7 @@ export default function Store() {
             title={upgrade.name}
             image={upgrade.image}
             price={upgrade.price}
+            units={upgrade.units}
           />
         ))}
       </div>
