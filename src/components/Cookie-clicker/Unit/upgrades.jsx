@@ -1,9 +1,9 @@
 // milk upgrades
-import milk from "./milk.png";
-import chocolateMilk from "./chocolateMilk.png";
-import strawberryMilk from "./strawberryMilk.png";
+import milk from "./Milk/milk.png";
+import chocolateMilk from "./Milk/chocolateMilk.png";
+import strawberryMilk from "./Milk/strawberryMilk.png";
 
-// units / buildings
+// units - buildings
 import Clicker from "./buildings/Cursor.png";
 import Grandma from "./buildings/Grandma.png";
 import Farm from "./buildings/Farm.png";

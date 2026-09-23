@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { upgrades } from "./CookieAssets/upgrades";
+import { upgrades } from "../Unit/upgrades.jsx";
 import storestyles from "./Store.module.css";
-import { Upgrade } from "./Upgrade";
+import { Upgrade } from "../Unit/Upgrade";
 
 export default function Store() {
   const [upgradeUnits, setUpgradeUnits] = useState(
@@ -12,6 +12,13 @@ export default function Store() {
   const increaseUnits = (index) => {
     setUpgradeUnits((prevUnits) =>
       prevUnits.map((units, i) => (i === index ? units + 1 : units)),
+    );
+  };
+
+  // decrease units by 1
+  const decreaseUnits = (index) => {
+    setUpgradeUnits((prevUnits) =>
+      prevUnits.map((units, i) => (i === index ? units - 1 : units)),
     );
   };
 
@@ -57,6 +64,7 @@ export default function Store() {
             price={upgrade.price}
             units={upgradeUnits[index]}
             increaseUnits={() => increaseUnits(index)}
+            decreaseUnits={() => decreaseUnits(index)}
           />
         ))}
       </div>

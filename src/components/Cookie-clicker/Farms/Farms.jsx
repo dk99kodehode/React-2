@@ -1,5 +1,5 @@
 import styles from "./Farms.module.css";
-import XpBar from "./XpBar.jsx";
+import XpBar from "../Skilltree/XpBar.jsx";
 
 export default function Farms() {
   return (

@@ -7,21 +7,21 @@
 
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-image: url("WoodP-H.png") 30 repeat;
+  border-image: url(../CookieAssets/WoodP-H.png) 30 repeat;
 
-  background: url("CookieAssets/CCBackground.png") center / 100% auto fixed
+  background: url("../CookieAssets/CCBackground.png") center / 100% auto fixed
     no-repeat;
 }
 
 .farmborder {
-  border-image: url("WoodP-V.png") 30 repeat;
+  border-image: url(../CookieAssets/WoodP-V.png) 30 repeat;
   border-bottom: 20px solid transparent;
 }
 
 .settings {
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
-  border-image: url("WoodP-V.png") 30 repeat;
+  border-image: url(../CookieAssets/WoodP-V.png) 30 repeat;
   height: 120px;
   background-color: rgba(0, 0, 0, 0.6);
 }
@@ -48,7 +48,7 @@
   justify-content: center;
   cursor: pointer;
 
-  background: url(WoodBack.png);
+  background: url(CookieAssets/Woodback.png);
 }
 
 .Buttons:hover {

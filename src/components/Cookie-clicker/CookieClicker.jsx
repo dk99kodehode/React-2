@@ -4,9 +4,9 @@ import styles from "./Cookie.module.css";
 
 // components og styling
 import Cookie from "../../assets/cookie.png";
-import Store from "./Store";
-import Farms from "./Farms";
-import Wave from "./Wave";
+import Store from "./Store/Store.jsx";
+import Farms from "./Farms/Farms.jsx";
+import Wave from "./Wave.jsx";
 
 export default function CookieClicker() {
   const [count, setCount] = useState(0);

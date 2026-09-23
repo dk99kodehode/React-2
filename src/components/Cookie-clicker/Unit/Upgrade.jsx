@@ -1,5 +1,5 @@
-import storestyles from "./Store.module.css";
-import UnitBackground from "./CookieAssets/buildings/UnitBackground.png";
+import storestyles from "../Store/Store.module.css";
+import UnitBackground from "../Unit/Buildings/UnitBackground.png";
 
 export function Upgrade({ title, image, price, units, increaseUnits }) {
   return (
