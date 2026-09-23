@@ -39,10 +39,9 @@
 }
 
 .Buttons {
-  padding: 10px;
+  padding: 7px;
   border-radius: 12%;
   margin-top: 2%;
-  padding-top: 5%;
 
   text-align: center;
   display: flex;
