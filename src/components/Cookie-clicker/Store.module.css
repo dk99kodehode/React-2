@@ -29,7 +29,7 @@
   cursor: pointer;
 }
 
-.buynsell:active {
+.buynsell:focus {
   text-shadow:
     1px 1px 10px #fff,
     1px 1px 10px #ccc;
