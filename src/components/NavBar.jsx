@@ -6,17 +6,17 @@ export default function NavBar() {
     <nav className="navbar">
       {/*Redirects the user to differnt sites on click*/}
       <Link className="nav-link" to="/">
-        Cookie Clicker
+        🍪Cookie Clicker
       </Link>
 
       {/*Redirects the user to differnt sites on click*/}
       <Link className="nav-link" to="/cat">
-        Cat Fact
+        😺 Cat Fact
       </Link>
 
       {/*Redirects the user to differnt sites on click*/}
       <Link className="nav-link" to="/user">
-        User Manager
+        👤User Manager
       </Link>
     </nav>
   );

@@ -3,3 +3,18 @@
   color: white;
   border-radius: 50%;
 }
+
+.page {
+  background-image: url(../CookieAssets/DarkenedWood.png);
+}
+
+.stats {
+  font-size: 42px;
+  text-shadow: 0 0 10px #fff;
+  padding-bottom: 5%;
+}
+
+.overhead {
+  font-size: 42px;
+  text-shadow: 0 0 10px #fff;
+}
