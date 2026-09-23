@@ -16,6 +16,7 @@ export function Upgrade({ title, image, price }) {
 
         marginTop: "10px",
 
+        cursor: "pointer",
         position: "relative",
         overflow: "hidden",
       }}

@@ -32,15 +32,14 @@ body::before {
 
 .cookiecontainer {
   display: grid;
-  width: 95%;
+  width: 97%;
   height: 580px;
+  margin-left: 4px;
   max-width: 100%;
   grid-template-columns: 500px 620px 360px;
   position: relative;
 
   overflow: hidden;
-
-  margin-left: 15px;
 
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
