@@ -102,11 +102,11 @@ body::before {
   width: 300px;
   aspect-ratio: 1 / 1;
   padding-bottom: 100px;
+  animation: cookiefied 3s infinite;
 }
 
 .cookie:hover {
   cursor: pointer;
-  animation: cookiefied 3s infinite;
 }
 
 @keyframes cookiefied {
