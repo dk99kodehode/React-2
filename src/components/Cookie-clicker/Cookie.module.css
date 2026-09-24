@@ -124,7 +124,7 @@ body::before {
 }
 
 .cookie:active {
-  scale: 0.95;
+  scale: 0.95 !important;
 }
 
 .counter {
@@ -149,6 +149,7 @@ body::before {
   font-size: 24px;
 }
 
+/*---- MILKY WAVE & ANIMATION FOR IT ---*/
 .wave {
   position: absolute;
   bottom: 0;
@@ -161,9 +162,9 @@ body::before {
   background-image: url("CookieAssets/Wave.png");
 
   background-repeat: repeat-x;
-  background-size: 1200px 200px;
+  background-size: 1400px 220px;
 
-  animation: wave 8s linear infinite;
+  animation: wave 12s linear infinite;
 }
 
 @keyframes wave {
@@ -173,5 +174,49 @@ body::before {
 
   to {
     background-position-x: -1200px;
+  }
+}
+
+/*----RADIANT BURST / GLOOW EFFECT ---*/
+
+.Radiant {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Radiant::before {
+  content: "";
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 1000px;
+  height: 400px;
+
+  background-image: url("./CookieAssets/RBurst.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  animation: radiantBurst 12s linear infinite;
+
+  z-index: 0;
+}
+
+@keyframes radiantBurst {
+  0% {
+    rotatez: (0deg);
+    transform: translate(-46%, -60%) rotateZ(0deg);
+  }
+
+  50% {
+    transform: translate(-46%, -60%) rotateZ(180deg);
+  }
+
+  100% {
+    transform: translate(-46%, -60%) rotateZ(360deg);
   }
 }

@@ -41,12 +41,15 @@ export default function CookieClicker() {
             <p className={styles.counterps}>per second: {cps.toFixed(2)}</p>
           </div>
           <div className={styles.CCcontainer}>
-            <img
-              className={styles.cookie}
-              src={Cookie}
-              onClick={increaseCount}
-              alt="cookie-png"
-            />
+            <div className={styles.Radiant}>
+              <img
+                className={styles.cookie}
+                src={Cookie}
+                onClick={increaseCount}
+                alt="cookie-png"
+              />
+            </div>
+
             <div className={styles.wave}></div>
           </div>
         </div>
