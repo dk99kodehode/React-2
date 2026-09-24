@@ -13,22 +13,22 @@ export default function Statsheet({ setMiddlePage }) {
       </button>
       <h1 className={styles.stats}>Statistics</h1>
 
-      <div>
+      <div className={styles.general}>
         <h1 className={styles.overhead}>General</h1>
 
-        <h2>Cookies in the bank:</h2>
-      </div>
+        <h2 className={styles.stat}>Cookies in the bank: ___</h2>
 
-      <div>
-        <h1 className={styles.overhead}>Upgrades</h1>
+        <div>
+          <h1 className={styles.overhead}>Upgrades</h1>
 
-        <h2>Upgrades unlocked</h2>
-      </div>
+          <h2 className={styles.stat}>Upgrades unlocked: 0 / 69</h2>
+        </div>
 
-      <div>
-        <h1 className={styles.overhead}>Achievements</h1>
+        <div>
+          <h1 className={styles.overhead}>Achievements</h1>
 
-        <h2>Achievements Unlocked: 0 / 420 (%)</h2>
+          <h2 className={styles.stat}>Achievements Unlocked: 0 / 420 (%)</h2>
+        </div>
       </div>
     </div>
   );

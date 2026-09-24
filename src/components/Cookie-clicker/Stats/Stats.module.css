@@ -1,16 +1,20 @@
-.exit {
-  background-color: rgba(0, 0, 0, 0.4);
-  margin-top: 2%;
-  border: none;
-  color: white;
-  border-radius: 16%;
-  padding: 4px;
-  cursor: pointer;
+.stats {
+  font-size: 38px;
+  text-shadow: 0 0 10px #fff;
+}
+.overhead {
+  font-size: 32px;
+  text-shadow: 0 0 10px #fff;
 }
 
-.exit:hover {
-  scale: 1.02;
-  border: solid 2px white;
+.stat {
+  font-size: 18px;
+}
+
+.general {
+  float: left;
+
+  overflow: hidden;
 }
 
 .page {
@@ -19,13 +23,20 @@
   flex-grow: 0;
 }
 
-.stats {
-  font-size: 42px;
-  text-shadow: 0 0 10px #fff;
-  padding-bottom: 5%;
+.exit {
+  background-color: rgba(0, 0, 0, 1);
+  margin-top: 2%;
+  margin-left: 86%;
+
+  border: none;
+  color: white;
+  border-radius: 16%;
+  padding-left: 12px;
+  cursor: pointer;
+  text-align: center;
 }
 
-.overhead {
-  font-size: 42px;
-  text-shadow: 0 0 10px #fff;
+.exit:hover {
+  scale: 1.02;
+  border: solid 2px white;
 }
