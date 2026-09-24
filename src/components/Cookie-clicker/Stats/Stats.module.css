@@ -1,11 +1,22 @@
 .exit {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin-top: 2%;
+  border: none;
   color: white;
-  border-radius: 50%;
+  border-radius: 16%;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.exit:hover {
+  scale: 1.02;
+  border: solid 2px white;
 }
 
 .page {
   background-image: url(../CookieAssets/DarkenedWood.png);
+  overflow-y: auto;
+  flex-grow: 0;
 }
 
 .stats {

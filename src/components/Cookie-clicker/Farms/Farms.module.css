@@ -1,32 +1,38 @@
 .farms {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-
-  border-left: 20px solid transparent;
   border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
   border-image: url(../CookieAssets/WoodP-H.png) 30 repeat;
-
-  background: url("../CookieAssets/CCBackground.png") center / 100% auto fixed
-    no-repeat;
 }
 
-.farmborder {
-  border-image: url(../CookieAssets/WoodP-V.png) 30 repeat;
-  border-bottom: 20px solid transparent;
-
-  flex-shrink: 0;
-}
+/*
+flex-grow:   0  , don't grow
+flex-shrink: 0  ,  don't shrink
+flex-basis:  160px , use 160px as the fixed size*/
 
 .settings {
+  flex: 0 0 160px;
+  height: 160px;
+  min-height: 160px;
+  max-height: 160px;
+  box-sizing: border-box;
+
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
   border-image: url(../CookieAssets/WoodP-V.png) 30 repeat;
-  height: 120px;
+
   background-color: rgba(0, 0, 0, 0.6);
-  flex-shrink: 0;
+}
+
+.farmBorder {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .unit {
