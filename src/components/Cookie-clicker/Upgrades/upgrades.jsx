@@ -10,6 +10,9 @@ import Farm from "../Unit/Buildings/Farm.png";
 import Mine from "../Unit/Buildings/Mine.png";
 import Factory from "../Unit/Buildings/Factory.png";
 
+import Bank from "../Unit/Buildings/Bank.png";
+import Temple from "../Unit/Buildings/Temple.png";
+
 export { milk, chocolateMilk, strawberryMilk, Clicker };
 
 export const upgrades = [
@@ -51,6 +54,24 @@ export const upgrades = [
     price: "🍪130,000",
 
     cps: 260,
+    units: 0,
+  },
+
+  {
+    name: "Bank",
+    image: Bank,
+    price: "🍪1.4 million",
+
+    cps: 1400,
+    units: 0,
+  },
+
+  {
+    name: "Temple",
+    image: Temple,
+    price: "🍪20 million",
+
+    cps: 7800,
     units: 0,
   },
 ];
