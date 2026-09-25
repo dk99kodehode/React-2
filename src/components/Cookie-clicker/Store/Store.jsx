@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { upgrades } from "../Unit/upgrades.jsx";
+import { upgrades } from "../Upgrades/upgrades.jsx";
 import storestyles from "./Store.module.css";
-import { Upgrade } from "../Unit/Upgrade";
+import { Upgrade } from "../Upgrades/Upgrade.jsx";
 
 export default function Store() {
   const [upgradeUnits, setUpgradeUnits] = useState(

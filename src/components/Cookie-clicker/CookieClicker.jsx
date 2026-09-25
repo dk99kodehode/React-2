@@ -32,7 +32,7 @@ export default function CookieClicker() {
       setClickTimes((prevTimes) => {
         const recentClicks = prevTimes.filter((time) => now - time < 1000);
 
-        setCps(recentClicks.length);
+        setCps(recentClicks.length || cps);
 
         return recentClicks;
       });

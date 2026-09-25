@@ -1,14 +1,14 @@
 // milk upgrades
-import milk from "./Milk/milk.png";
-import chocolateMilk from "./Milk/chocolateMilk.png";
-import strawberryMilk from "./Milk/strawberryMilk.png";
+import milk from "../Unit/Milk/milk.png";
+import chocolateMilk from "../Unit/Milk/chocolateMilk.png";
+import strawberryMilk from "../Unit/Milk/strawberryMilk.png";
 
 // units - buildings
-import Clicker from "./buildings/Cursor.png";
-import Grandma from "./buildings/Grandma.png";
-import Farm from "./buildings/Farm.png";
-import Mine from "./buildings/Mine.png";
-import Factory from "./buildings/Factory.png";
+import Clicker from "../Unit/Buildings/cursor.png";
+import Grandma from "../Unit/Buildings/Grandma.png";
+import Farm from "../Unit/Buildings/Farm.png";
+import Mine from "../Unit/Buildings/Mine.png";
+import Factory from "../Unit/Buildings/Factory.png";
 
 export { milk, chocolateMilk, strawberryMilk, Clicker };
 
