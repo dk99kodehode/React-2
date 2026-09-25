@@ -9,20 +9,37 @@ import Farms from "./Farms/Farms.jsx";
 
 export default function CookieClicker() {
   const [count, setCount] = useState(0);
+  const [clickTimes, setClickTimes] = useState([]);
   const [cps, setCps] = useState(0);
 
-  // Later, these can come from your Store/Farms components
-  const [farmCps, setFarmCps] = useState(0);
-  const [factoryCps, setFactoryCps] = useState(0);
-
-  useEffect(() => {
-    setCps(farmCps + factoryCps);
-  }, [farmCps, factoryCps]);
-
-  // Calculate CPS from clicks
+  // Increases Cookie Count from clicks
   const increaseCount = () => {
+    const now = Date.now();
+
     setCount((prevCount) => prevCount + 1);
+
+    setClickTimes((prevTimes) => [
+      ...prevTimes.filter((time) => now - time < 1000),
+      now,
+    ]);
   };
+
+  // calculates the cookies generated
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = Date.now();
+
+      setClickTimes((prevTimes) => {
+        const recentClicks = prevTimes.filter((time) => now - time < 1000);
+
+        setCps(recentClicks.length);
+
+        return recentClicks;
+      });
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
@@ -35,7 +52,7 @@ export default function CookieClicker() {
           />
           <div className={styles.cookiepersecond}>
             <p className={styles.counter}>
-              <span>{count.toFixed(0)}</span>
+              <span>{count.toFixed()}</span>
               <span>cookies</span>
             </p>
             <p className={styles.counterps}>per second: {cps.toFixed(2)}</p>
