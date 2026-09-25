@@ -33,7 +33,8 @@ body::before {
 .cookiecontainer {
   display: grid;
   width: 97%;
-  height: 580px;
+  height: 636px;
+
   margin-left: 4px;
   max-width: 100%;
   grid-template-columns: 500px 620px 360px;
@@ -154,17 +155,16 @@ body::before {
 /*---- MILKY WAVE & ANIMATION FOR IT ---*/
 .wave {
   position: absolute;
-  bottom: 0;
+  bottom: -50px;
 
   z-index: 1;
 
   width: 540px;
-  height: 200px;
+  height: 350px; /* increased from 200px */
 
   background-image: url("CookieAssets/Wave.png");
-
   background-repeat: repeat-x;
-  background-size: 1400px 220px;
+  background-size: 1400px 350px; /* increase this too */
 
   animation: wave 12s linear infinite;
 }
@@ -178,7 +178,6 @@ body::before {
     background-position-x: -1000px;
   }
 }
-
 /*----RADIANT BURST / GLOOW EFFECT ---*/
 
 .Radiant {

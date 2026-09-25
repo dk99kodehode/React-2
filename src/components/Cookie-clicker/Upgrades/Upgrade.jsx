@@ -1,4 +1,3 @@
-import storestyles from "../Store/Store.module.css";
 import UnitBackground from "../Unit/Buildings/UnitBackground.png";
 
 export function Upgrade({ title, image, price, units, increaseUnits }) {

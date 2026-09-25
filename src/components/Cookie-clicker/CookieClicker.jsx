@@ -55,7 +55,7 @@ export default function CookieClicker() {
               <span>{count.toFixed()}</span>
               <span>cookies</span>
             </p>
-            <p className={styles.counterps}>per second: {cps.toFixed(2)}</p>
+            <p className={styles.counterps}>per second: {cps.toFixed(0)}</p>
           </div>
           <div className={styles.CCcontainer}>
             <div className={styles.Radiant}>
