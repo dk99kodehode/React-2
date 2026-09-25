@@ -210,7 +210,7 @@ body::before {
 @keyframes radiantBurst {
   0% {
     rotatez: (0deg);
-    transform: translate(-46%, -62%) rotateZ(0deg);
+    transform: translate(-46%, -60%) rotateZ(0deg);
   }
 
   50% {
