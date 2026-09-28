@@ -164,18 +164,17 @@ body::before {
 
   background-image: url("CookieAssets/Wave.png");
   background-repeat: repeat-x;
-  background-size: 1400px 350px; /* increase this too */
+  background-size: 1500px 350px; /* increase this too */
 
-  animation: wave 12s linear infinite;
+  animation: wave 12s linear infinite alternate;
 }
 
 @keyframes wave {
-  from {
+  0% {
     background-position-x: 0;
   }
-
-  to {
-    background-position-x: -1400px;
+  100% {
+    background-position-x: -900px;
   }
 }
 /*----RADIANT BURST / GLOOW EFFECT ---*/
