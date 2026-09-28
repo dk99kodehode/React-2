@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { upgrades } from "../Upgrades/upgrades.jsx";
 import storestyles from "./Store.module.css";
+
+//
 import { Upgrade } from "../Upgrades/Upgrade.jsx";
+import { upgrades } from "../Upgrades/upgrades.jsx";
 
 export default function Store() {
   const [upgradeUnits, setUpgradeUnits] = useState(
@@ -59,12 +61,12 @@ export default function Store() {
       </div>
 
       <div>
-        {upgrades.map((upgrade, index) => (
+        {upgrades.map((upgrades, index) => (
           <Upgrade
             key={index}
-            title={upgrade.name}
-            image={upgrade.image}
-            price={upgrade.price}
+            title={upgrades.name}
+            image={upgrades.image}
+            price={upgrades.price}
             units={upgradeUnits[index]}
             increaseUnits={() => increaseUnits(index)}
             decreaseUnits={() => decreaseUnits(index)}
