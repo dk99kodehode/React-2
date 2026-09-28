@@ -220,3 +220,22 @@ body::before {
     transform: translate(-46%, -60%) rotateZ(360deg);
   }
 }
+
+.clicked {
+  position: absolute;
+  z-index: 99;
+  font-size: 24px;
+  color: white;
+
+  animation: rising 1s ease;
+}
+
+@keyframes rising {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-200px);
+  }
+}
