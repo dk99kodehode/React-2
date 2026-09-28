@@ -1,57 +1,35 @@
 import { useEffect, useState } from "react";
-
 import "./Catstyling.css";
 
 export default function CatFact() {
-  const [cat, setCat] = useState(null);
-
-  // fetches api and awaits json response, stores data in setCat(data)
+  const [fact, setFact] = useState("");
 
   const fetchCat = async () => {
-    const factres = await fetch("https://catfact.ninja/facts?limit=5");
-    const Imageres = await fetch(
-      "https://api.thecatapi.com/v1/images/search?limit=5",
-    );
+    try {
+      const response = await fetch("https://catfact.ninja/facts?limit=5");
 
-    const Catfact = await factres.json();
-    const ImageData = await Imageres.json();
+      if (!response.ok) {
+        throw new Error(`HTTP error: ${response.status}`);
+      }
 
-    setCat({
-      facts: Catfact.data,
-      image: ImageData[0].url,
-    });
+      const data = await response.json();
+
+      const randomFact =
+        data.data[Math.floor(Math.random() * data.data.length)];
+
+      setFact(randomFact.fact);
+    } catch (error) {
+      console.error("Failed to fetch cat facts:", error);
+    }
   };
 
-  // 1 time event that fetches the data on refresh or button click
   useEffect(() => {
     fetchCat();
+
+    const interval = setInterval(fetchCat, 10000);
+
+    return () => clearInterval(interval);
   }, []);
 
-  // visst ikke cat er loadet så h1... "loading"
-  if (!cat) return <h1>Loading...</h1>;
-
-  // etter apien har renderet returner du en button med paragraph
-  return (
-    <>
-      <div className="random-cat">
-        <div className="cat-info">
-          <div>
-            <p className="cat-fact">
-              {cat.facts[Math.floor(Math.random() * cat.facts.length)].fact}
-            </p>
-          </div>
-
-          <div>
-            <button className="cat-button" onClick={fetchCat}>
-              Want a different fact?
-            </button>
-          </div>
-        </div>
-
-        <div>
-          <img className="random-cat-image" src={cat.image} alt="random-cat" />
-        </div>
-      </div>
-    </>
-  );
+  return <p className="cat-fact">{fact}</p>;
 }

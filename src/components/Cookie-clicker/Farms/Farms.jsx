@@ -1,6 +1,9 @@
 import styles from "./Farms.module.css";
 import XpBar from "../Skilltree/XpBar.jsx";
 
+// random cat fact
+import CatFact from "../../CatAPI/RandomCat.jsx";
+
 // change pages
 import { useState } from "react";
 import Statsheet from "../Stats/Statsheet.jsx";
@@ -39,7 +42,7 @@ export default function Farms() {
               display: "flex",
             }}
           >
-            <p>random cat fact</p>
+            <CatFact />
           </div>
 
           <div

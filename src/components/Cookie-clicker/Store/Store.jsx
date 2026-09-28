@@ -31,7 +31,12 @@ export default function Store() {
       </div>
 
       <div
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.7)", paddingBottom: "5px" }}
+        style={{
+          backgroundColor: "rgba(0, 0, 0, 0.7)",
+          paddingBottom: "5px",
+          position: "sticky",
+          top: "0",
+        }}
       >
         <div
           style={{
