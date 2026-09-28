@@ -160,7 +160,7 @@ body::before {
   z-index: 1;
 
   width: 540px;
-  height: 350px; /* increased from 200px */
+  height: 320px; /* increased from 200px */
 
   background-image: url("CookieAssets/Wave.png");
   background-repeat: repeat-x;

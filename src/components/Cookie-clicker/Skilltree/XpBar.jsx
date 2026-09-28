@@ -2,7 +2,7 @@ export default function XpBar() {
   return (
     <div
       style={{
-        width: "95%",
+        width: "60%",
         height: "12px",
 
         position: "relative",
