@@ -8,7 +8,7 @@ import CatFact from "../../CatAPI/RandomCat.jsx";
 import { useState } from "react";
 import Statsheet from "../Stats/Statsheet.jsx";
 
-export default function Farms() {
+export default function Farms({ xp }) {
   const [middlePage, setMiddlePage] = useState("farms");
 
   return (
@@ -58,7 +58,7 @@ export default function Farms() {
           </div>
         </div>
 
-        <XpBar />
+        <XpBar xp={xp} />
       </div>
 
       {/* MIDDLE */}

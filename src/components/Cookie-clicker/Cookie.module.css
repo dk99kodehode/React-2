@@ -45,11 +45,11 @@ body::before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
 
-  border-image: url(CookieAssets/WoodP-H.png) 30 repeat;
+  border-image: url(CookieAssets/Wood/WoodP-H.png) 30 repeat;
 }
 
 .cookie {
-  width: 200px;
+  width: 240px;
   aspect-ratio: 1 / 1;
   padding-bottom: 50px;
   margin-left: 29%;
@@ -104,25 +104,10 @@ body::before {
   width: 300px;
   aspect-ratio: 1 / 1;
   padding-bottom: 100px;
-  /*animation: cookiefied 3s infinite;*/
 }
 
 .cookie:hover {
   cursor: pointer;
-}
-
-@keyframes cookiefied {
-  0% {
-    scale: 1;
-  }
-
-  75% {
-    scale: 1.04;
-  }
-
-  100% {
-    scale: 1;
-  }
 }
 
 .cookie:active {
@@ -162,7 +147,7 @@ body::before {
   width: 540px;
   height: 320px; /* increased from 200px */
 
-  background-image: url("CookieAssets/Wave.png");
+  background-image: url("CookieAssets/LightWave/Wave.png");
   background-repeat: repeat-x;
   background-size: 1500px 350px; /* increase this too */
 
@@ -196,7 +181,7 @@ body::before {
   width: 1000px;
   height: 450px;
 
-  background-image: url("./CookieAssets/RBurst.png");
+  background-image: url("./CookieAssets/LightWave/RBurst.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -226,8 +211,12 @@ body::before {
   z-index: 99;
   font-size: 24px;
   color: white;
+  display: none;
+}
 
-  animation: rising 1s ease;
+.clicked:active {
+  animation: rising 2s;
+  display: flex;
 }
 
 @keyframes rising {
@@ -236,6 +225,6 @@ body::before {
   }
 
   100% {
-    transform: translateY(-200px);
+    transform: translateY(-100px);
   }
 }

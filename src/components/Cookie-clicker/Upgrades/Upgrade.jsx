@@ -1,9 +1,9 @@
 import UnitBackground from "../Unit/Buildings/UnitBackground.png";
 
-export function Upgrade({ title, image, price, units, increaseUnits }) {
+export function Upgrade({ title, image, price, units, buyUpgrade }) {
   return (
     <div
-      onClick={increaseUnits}
+      onClick={buyUpgrade}
       style={{
         backgroundImage: `url(${UnitBackground})`,
         backgroundSize: "cover",
@@ -30,7 +30,6 @@ export function Upgrade({ title, image, price, units, increaseUnits }) {
           paddingTop: "20px",
           opacity: "0.8",
           flexShrink: 0,
-
           marginLeft: "0px",
         }}
         src={image}
@@ -63,7 +62,7 @@ export function Upgrade({ title, image, price, units, increaseUnits }) {
             margin: 0,
           }}
         >
-          {price}
+          {`🍪${price}`}
         </p>
       </div>
 

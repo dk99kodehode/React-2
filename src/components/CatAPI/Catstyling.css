@@ -1,5 +1,7 @@
 .cat-fact {
   word-break: break-all;
-  width: 400px;
+  width: 300px;
   font-size: 12px;
+
+  overflow: hidden;
 }

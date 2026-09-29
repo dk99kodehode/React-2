@@ -6,7 +6,7 @@
 
   border-right: 20px solid transparent;
   border-left: 20px solid transparent;
-  border-image: url(../CookieAssets/WoodP-H.png) 30 repeat;
+  border-image: url(../CookieAssets/Wood/WoodP-H.png) 30 repeat;
 }
 
 /*
@@ -23,7 +23,7 @@ flex-basis:  160px , use 160px as the fixed size*/
 
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
-  border-image: url(../CookieAssets/WoodP-V.png) 30 repeat;
+  border-image: url(../CookieAssets/Wood/WoodP-V.png) 30 repeat;
 
   background-color: rgba(0, 0, 0, 0.6);
 }
@@ -44,7 +44,7 @@ flex-basis:  160px , use 160px as the fixed size*/
   border: 2px solid black;
 
   border-bottom: 10px solid transparent;
-  border-image: url(../CookieAssets/WoodP-V.png) 30 repeat;
+  border-image: url(../CookieAssets/Wood/WoodP-V.png) 30 repeat;
 }
 
 .Buttons {
@@ -57,7 +57,7 @@ flex-basis:  160px , use 160px as the fixed size*/
   justify-content: center;
   cursor: pointer;
 
-  background: url(../CookieAssets/Woodback.png);
+  background: url(../CookieAssets/Wood/DarkenedWood.png);
 }
 
 .Buttons:hover {

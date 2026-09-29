@@ -3,7 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import CatFact from "../components/CatAPI/RandomCat";
 import UserManager from "../components/UserManager/UserManager";
-import CookieClicker from "../components/Cookie-clicker/CookieClicker.jsx";
+import CookieClicker from "../components/Cookie-clicker/CookieClicker";
 
 export const router = createBrowserRouter([
   {

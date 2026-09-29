@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Catstyling.css";
+import CatSign from "../Cookie-clicker/CookieAssets/CatMedival.png";
 
 export default function CatFact() {
   const [fact, setFact] = useState("");

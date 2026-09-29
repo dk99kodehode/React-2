@@ -7,8 +7,12 @@ import Cookie from "../../assets/cookie.png";
 import Store from "./Store/Store.jsx";
 import Farms from "./Farms/Farms.jsx";
 
+import XpBar from "./Skilltree/XpBar.jsx";
+
 export default function CookieClicker() {
   const [count, setCount] = useState(0);
+  const xp = Math.floor(count / 1);
+
   const [clicked, setClicked] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -26,19 +30,6 @@ export default function CookieClicker() {
       ...prevTimes.filter((time) => now - time < 1000),
       now,
     ]);
-  };
-
-  const visualCounter = (e) => {
-    setClicked(true);
-
-    setPosition({
-      x: e.clientX,
-      y: e.clientY,
-    });
-
-    setTimeout(() => {
-      setClicked(false);
-    }, 200);
   };
 
   // calculates the cookies generated
@@ -80,27 +71,19 @@ export default function CookieClicker() {
                 className={styles.cookie}
                 src={Cookie}
                 onClick={() => {
-                  increaseCount(count);
-                  visualCounter(count);
+                  increaseCount();
                 }}
                 alt="cookie-png"
               />
             </div>
-            {clicked && (
-              <div
-                className={styles.clicked}
-                style={{ left: "position.x", top: "position.y" }}
-              >
-                +1
-              </div>
-            )}
+            {clicked && <div className={styles.clicked}>+1</div>}
             <div className={styles.wave}></div>
           </div>
         </div>
 
-        <Farms />
+        <Farms xp={xp} />
 
-        <Store />
+        <Store count={count} setCount={setCount} />
       </div>
     </>
   );

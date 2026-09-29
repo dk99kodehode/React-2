@@ -1,26 +1,46 @@
 import { useState } from "react";
 import storestyles from "./Store.module.css";
 
-//
 import { Upgrade } from "../Upgrades/Upgrade.jsx";
 import { upgrades } from "../Upgrades/upgrades.jsx";
 
-export default function Store() {
+export default function Store({ count, setCount }) {
   const [upgradeUnits, setUpgradeUnits] = useState(
-    upgrades.map((upgrade) => upgrade.units),
+    upgrades.map((upgrade) => Number(upgrade.units) || 0),
   );
 
-  // increases units by 1
-  const increaseUnits = (index) => {
+  const [upgradePrices, setUpgradePrices] = useState(
+    upgrades.map((upgrade) => upgrade.price),
+  );
+
+  const buyUpgrade = (index) => {
+    const price = upgradePrices[index];
+
+    // Make sure price is actually a number
+    if (typeof price !== "number" || Number.isNaN(price)) {
+      console.error("Invalid price:", price);
+      return;
+    }
+
+    // Not enough cookies
+    if (count < price) {
+      console.log("Not enough cookies!");
+      return;
+    }
+
+    // Remove cookies
+    setCount((prevCount) => prevCount - price);
+
+    // Add one unit
     setUpgradeUnits((prevUnits) =>
       prevUnits.map((units, i) => (i === index ? units + 1 : units)),
     );
-  };
 
-  // decrease units by 1
-  const decreaseUnits = (index) => {
-    setUpgradeUnits((prevUnits) =>
-      prevUnits.map((units, i) => (i === index ? units - 1 : units)),
+    // Increase price by 15%
+    setUpgradePrices((prevPrices) =>
+      prevPrices.map((currentPrice, i) =>
+        i === index ? Math.ceil(currentPrice * 1.3) : currentPrice,
+      ),
     );
   };
 
@@ -66,15 +86,14 @@ export default function Store() {
       </div>
 
       <div>
-        {upgrades.map((upgrades, index) => (
+        {upgrades.map((upgrade, index) => (
           <Upgrade
             key={index}
-            title={upgrades.name}
-            image={upgrades.image}
-            price={upgrades.price}
+            title={upgrade.name}
+            image={upgrade.image}
+            price={upgradePrices[index]}
             units={upgradeUnits[index]}
-            increaseUnits={() => increaseUnits(index)}
-            decreaseUnits={() => decreaseUnits(index)}
+            buyUpgrade={() => buyUpgrade(index)}
           />
         ))}
       </div>
