@@ -152,6 +152,7 @@ body::before {
   background-size: 1500px 350px; /* increase this too */
 
   animation: wave 12s linear infinite alternate;
+  pointer-events: none;
 }
 
 @keyframes wave {
@@ -187,6 +188,7 @@ body::before {
   background-size: contain;
 
   animation: radiantBurst 12s linear infinite;
+  pointer-events: none;
 
   z-index: 0;
 }

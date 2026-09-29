@@ -56,10 +56,12 @@ flex-basis:  160px , use 160px as the fixed size*/
   display: flex;
   justify-content: center;
   cursor: pointer;
+  border: solid #020202 2px;
 
-  background: url(../CookieAssets/Wood/DarkenedWood.png);
+  background: url(../CookieAssets/Wood/WoodBack.png);
 }
 
 .Buttons:hover {
   scale: 1.05;
+  text-shadow: 0 0 10px #ffff;
 }

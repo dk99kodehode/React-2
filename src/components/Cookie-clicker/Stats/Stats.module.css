@@ -18,7 +18,7 @@
 }
 
 .page {
-  background-image: url(../CookieAssets/DarkenedWood.png);
+  background-image: url(../CookieAssets/Wood/DarkenedWood.png);
   overflow-y: auto;
   flex-grow: 0;
 }
