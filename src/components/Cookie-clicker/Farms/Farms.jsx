@@ -1,8 +1,8 @@
-import styles from "./Farms.module.css";
 import XpBar from "../Skilltree/XpBar.jsx";
-
-// random cat fact
 import CatFact from "../../CatAPI/RandomCat.jsx";
+
+// styling and button assets
+import styles from "./Farms.module.css";
 
 // change pages
 import { useState } from "react";
