@@ -63,7 +63,7 @@ export default function Store({ count, setCount }) {
 
       <div
         style={{
-          backgroundColor: "rgba(0, 0, 0, 0.7)",
+          backgroundColor: "rgba(0, 0, 0, 0.5)",
           paddingBottom: "5px",
           position: "sticky",
           top: "0",

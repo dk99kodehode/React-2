@@ -14,7 +14,7 @@ export function Upgrade({ title, image, price, units, buyUpgrade }) {
         paddingBottom: "20px",
         alignItems: "center",
 
-        marginTop: "10px",
+        marginTop: "2px",
 
         cursor: "pointer",
         position: "relative",
@@ -48,7 +48,7 @@ export function Upgrade({ title, image, price, units, buyUpgrade }) {
       >
         <h3
           style={{
-            fontSize: "24px",
+            fontSize: "20px",
             color: "white",
             margin: "0 0 5px 0",
           }}
@@ -60,6 +60,7 @@ export function Upgrade({ title, image, price, units, buyUpgrade }) {
           style={{
             color: "gold",
             margin: 0,
+            fontSize: "15px",
           }}
         >
           {`🍪${price}`}

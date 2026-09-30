@@ -7,7 +7,7 @@
 
 .storeOverhead {
   height: 20px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
   display: flex;
 
@@ -53,7 +53,7 @@
 .Increases {
   width: 100%;
   height: 47px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
 
   display: flex;
   flex-direction: row;
@@ -66,7 +66,9 @@
 }
 
 .border {
-  border: 2px solid rgb(231, 180, 12);
+  border: 3px solid rgb(253, 252, 250);
+  background-color: rgb(98, 97, 97);
+  border-radius: 12px;
   width: 58px;
   height: 42px;
 }
