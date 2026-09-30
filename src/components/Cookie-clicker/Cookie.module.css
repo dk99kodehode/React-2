@@ -45,7 +45,7 @@ body::before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
 
-  border-image: url(CookieAssets/Wood/WoodP-H.png) 30 repeat;
+  border-image: url(CookieAssets/Wood/WoodP-V.png) 30 repeat;
 }
 
 .cookie {

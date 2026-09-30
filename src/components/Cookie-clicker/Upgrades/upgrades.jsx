@@ -9,9 +9,16 @@ import Grandma from "../Unit/Buildings/Grandma.png";
 import Farm from "../Unit/Buildings/Farm.png";
 import Mine from "../Unit/Buildings/Mine.png";
 import Factory from "../Unit/Buildings/Factory.png";
-
 import Bank from "../Unit/Buildings/Bank.png";
 import Temple from "../Unit/Buildings/Temple.png";
+
+// background
+import GrandmaBck from "../Unit/UnitBackgroundAssets/GrandmaBack.png";
+import FarmBck from "../Unit/UnitBackgroundAssets/FarmBack.png";
+import MineBck from "../Unit/UnitBackgroundAssets/MineBack.png";
+import FactoryBck from "../Unit/UnitBackgroundAssets/FactoryBack.png";
+import BankBck from "../Unit/UnitBackgroundAssets/BankBack.png";
+import TempleBck from "../Unit/UnitBackgroundAssets/TempleBack.png";
 
 export { milk, chocolateMilk, strawberryMilk, Clicker };
 
@@ -29,6 +36,8 @@ export const upgrades = [
     price: 100,
     cps: 1,
     units: 0,
+
+    background: GrandmaBck,
   },
   {
     name: "Farm",
@@ -36,6 +45,8 @@ export const upgrades = [
     price: 1100,
     cps: 8,
     units: 0,
+
+    background: FarmBck,
   },
   {
     name: "Mine",
@@ -43,6 +54,8 @@ export const upgrades = [
     price: 12000,
     cps: 47,
     units: 0,
+
+    background: MineBck,
   },
   {
     name: "Factory",
@@ -50,6 +63,8 @@ export const upgrades = [
     price: 130000,
     cps: 260,
     units: 0,
+
+    background: FactoryBck,
   },
   {
     name: "Bank",
@@ -57,6 +72,8 @@ export const upgrades = [
     price: 1400000,
     cps: 1400,
     units: 0,
+
+    background: BankBck,
   },
   {
     name: "Temple",
@@ -64,5 +81,7 @@ export const upgrades = [
     price: 20000000,
     cps: 7800,
     units: 0,
+
+    background: TempleBck,
   },
 ];

@@ -3,6 +3,9 @@ import CatFact from "../../CatAPI/RandomCat.jsx";
 
 // styling and button assets
 import styles from "./Farms.module.css";
+import { upgrades } from "../Upgrades/upgrades.jsx";
+
+import UnitContainer from "../Unit/Unit.jsx";
 
 // change pages
 import { useState } from "react";
@@ -65,11 +68,14 @@ export default function Farms({ xp }) {
       <div className={styles.farmBorder}>
         {middlePage === "farms" && (
           <>
-            <div className={styles.unit}></div>
-            <div className={styles.unit}></div>
-            <div className={styles.unit}></div>
-            <div className={styles.unit}></div>
-            <div className={styles.unit}></div>
+            {upgrades
+              .filter((upgrade) => upgrade.background)
+              .map((upgrade, index) => (
+                <UnitContainer
+                  key={index}
+                  backgroundImage={upgrade.background}
+                />
+              ))}
           </>
         )}
 

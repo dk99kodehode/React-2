@@ -6,8 +6,8 @@
 }
 
 .storeOverhead {
-  height: 40px;
-  background-color: rgba(0, 0, 0, 0.4);
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   display: flex;
 
@@ -17,7 +17,7 @@
 
   border-bottom: 20px solid transparent;
 
-  border-image: url(CookieAssets/Wood/WoodP-V.png) 20 repeat;
+  border-image: url(CookieAssets/Wood/WoodP-H.png) 20 repeat;
 }
 
 .storeOverhead h2 {
@@ -48,4 +48,15 @@
   width: 40px;
   height: 40px;
   object-fit: contain;
+}
+
+.Increases {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  border-image: url(../CookieAssets/Wood/WoodP-H.png) 20 repeat;
+
+  border-bottom: 20px solid transparent;
+  border-top: 20px solid transparent;
 }

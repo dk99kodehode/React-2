@@ -36,7 +36,7 @@ export default function Store({ count, setCount }) {
       prevUnits.map((units, i) => (i === index ? units + 1 : units)),
     );
 
-    // Increase price by 15%
+    // Increase price by 30% can be changed with with percentile increase to desire, main goal is to increas by 1.15 + Number of Units = "1.15 + N"
     setUpgradePrices((prevPrices) =>
       prevPrices.map((currentPrice, i) =>
         i === index ? Math.ceil(currentPrice * 1.3) : currentPrice,
@@ -48,6 +48,11 @@ export default function Store({ count, setCount }) {
     <div className={storestyles.store}>
       <div className={storestyles.storeOverhead}>
         <h2>STORE</h2>
+      </div>
+
+      {/*-- tiny increases , upgrades--*/}
+      <div className={storestyles.Increases}>
+        <div></div>
       </div>
 
       <div
@@ -85,6 +90,7 @@ export default function Store({ count, setCount }) {
         </div>
       </div>
 
+      {/*-- units */}
       <div>
         {upgrades.map((upgrade, index) => (
           <Upgrade
