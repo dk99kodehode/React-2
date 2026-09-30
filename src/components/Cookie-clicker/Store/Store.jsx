@@ -52,7 +52,13 @@ export default function Store({ count, setCount }) {
 
       {/*-- tiny increases , upgrades--*/}
       <div className={storestyles.Increases}>
-        <div></div>
+        <div className={storestyles.border}></div>
+        <div className={storestyles.border}></div>
+        <div className={storestyles.border}></div>
+        <div className={storestyles.border}></div>
+        <div className={storestyles.border}></div>
+        <div className={storestyles.border}></div>
+        <div className={storestyles.border}></div>
       </div>
 
       <div
