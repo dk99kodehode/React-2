@@ -3,6 +3,7 @@ import storestyles from "./Store.module.css";
 
 import { Upgrade } from "../Upgrades/Upgrade.jsx";
 import { upgrades } from "../Upgrades/upgrades.jsx";
+import Enchantments from "../Upgrades/Enchantments/Enchantments.jsx";
 
 export default function Store({ count, setCount }) {
   const [upgradeUnits, setUpgradeUnits] = useState(
@@ -52,13 +53,8 @@ export default function Store({ count, setCount }) {
 
       {/*-- tiny increases , upgrades--*/}
       <div className={storestyles.Increases}>
-        <div className={storestyles.border}></div>
-        <div className={storestyles.border}></div>
-        <div className={storestyles.border}></div>
-        <div className={storestyles.border}></div>
-        <div className={storestyles.border}></div>
-        <div className={storestyles.border}></div>
-        <div className={storestyles.border}></div>
+        <Enchantments />
+        <Enchantments />
       </div>
 
       <div

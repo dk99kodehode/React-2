@@ -64,7 +64,7 @@ body::before {
 
   font-size: 32px;
 
-  margin-left: 42%;
+  margin-left: 37%;
   border: none;
   text-align: center;
   background-color: transparent;
@@ -117,11 +117,13 @@ body::before {
 .counter {
   font-size: 38px;
   gap: 10px;
+  padding-left: 12px;
   display: flex;
   justify-content: center;
 }
 
 .counterps {
+  padding-left: 12px;
   font-size: 16px;
 }
 .cookiepersecond {
@@ -130,7 +132,8 @@ body::before {
 
   background-color: rgba(0, 0, 0, 0.4);
   color: white;
-  width: 550px;
+  width: 500px;
+  overflow: hidden;
 
   padding: 10px;
 

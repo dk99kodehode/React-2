@@ -64,11 +64,3 @@
   border-bottom: 20px solid transparent;
   border-top: 20px solid transparent;
 }
-
-.border {
-  border: 3px solid rgb(253, 252, 250);
-  background-color: rgb(98, 97, 97);
-  border-radius: 12px;
-  width: 58px;
-  height: 42px;
-}
