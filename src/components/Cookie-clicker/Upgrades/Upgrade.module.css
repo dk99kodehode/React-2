@@ -1,0 +1,49 @@
+.container {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+
+  z-index: 2147483647 !important;
+
+  width: fit-content;
+  height: 100px;
+  background-color: rgb(35, 35, 35);
+  border: 2px solid rgb(245, 143, 9);
+  border-radius: 12px;
+}
+
+.upgradeRow {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.upgrade {
+  font-size: 10px;
+  background-color: rgb(250, 249, 249);
+
+  color: rgb(0, 0, 0);
+  border-radius: 3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 5%;
+}
+
+.price {
+  margin-left: auto;
+  color: gold;
+  font-size: 12px;
+}
+
+.stats {
+  background-color: rgb(101, 100, 100);
+  border-radius: 6px;
+  width: 95%;
+  height: 10px;
+  margin: auto;
+
+  padding-left: 10px;
+}

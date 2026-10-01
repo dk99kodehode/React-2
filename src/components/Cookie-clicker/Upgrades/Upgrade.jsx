@@ -1,5 +1,6 @@
 import { useState } from "react";
 import UnitBackground from "../Unit/Buildings/UnitBackground.png";
+import styles from "./Upgrade.module.css";
 
 export function Upgrade({ title, image, price, units, buyUpgrade }) {
   const [show, setShow] = useState(false);
@@ -96,7 +97,27 @@ export function Upgrade({ title, image, price, units, buyUpgrade }) {
       </div>
 
       {/* DESCRIPTION */}
-      {show && <div></div>}
+      {show && (
+        <div className={styles.container}>
+          <div className={styles.upgradeRow}>
+            <img src={image} alt={title} />
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <p className={styles.upgrade}>Owned {units}</p>
+            </div>
+            <p className={styles.price}>${price}🍪</p>
+          </div>
+
+          <div style={{ display: "Flex", flexDirection: "column", gap: "2px" }}>
+            <div className={styles.stats}></div>
+            <div className={styles.stats}></div>
+            <div className={styles.stats}></div>
+          </div>
+
+          <div>
+            <p style={{ fontSize: "10px" }}>Click to purchase.</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

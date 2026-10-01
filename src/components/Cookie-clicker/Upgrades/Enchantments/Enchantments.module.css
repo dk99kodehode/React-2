@@ -1,6 +1,6 @@
 .border {
-  border: 3px solid rgb(253, 252, 250);
-  background-color: rgb(98, 97, 97);
+  border: 3px solid rgb(245, 165, 5);
+  background-color: rgb(81, 46, 7);
   border-radius: 12px;
   width: 58px;
   height: 42px;
@@ -8,11 +8,11 @@
 }
 
 .border:hover {
-  background-color: rgb(167, 165, 165);
+  background-color: rgb(156, 88, 20);
 }
 
 .description {
-  background-color: rgba(31, 31, 30, 0.8);
+  background-color: rgba(12, 12, 12, 0.8);
   border-radius: 12px;
   border: rgb(228, 194, 0) 2px solid;
 
