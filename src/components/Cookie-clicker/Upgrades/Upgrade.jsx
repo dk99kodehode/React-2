@@ -1,24 +1,28 @@
+import { useState } from "react";
 import UnitBackground from "../Unit/Buildings/UnitBackground.png";
 
 export function Upgrade({ title, image, price, units, buyUpgrade }) {
+  const [show, setShow] = useState(false);
+
   return (
     <div
       onClick={buyUpgrade}
+      onMouseEnter={() => setShow(true)}
+      onMouseLeave={() => setShow(false)}
       style={{
         backgroundImage: `url(${UnitBackground})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-
         display: "flex",
         height: "55px",
         paddingBottom: "20px",
         alignItems: "center",
-
         marginTop: "2px",
-
         cursor: "pointer",
         position: "relative",
-        overflow: "hidden",
+        overflow: "visible",
+
+        filter: show ? "brightness(1.2)" : "brightness(1)",
       }}
     >
       {/* IMAGE */}
@@ -63,7 +67,7 @@ export function Upgrade({ title, image, price, units, buyUpgrade }) {
             fontSize: "18px",
           }}
         >
-          {`🍪${price}`}
+          🍪{price}
         </p>
       </div>
 
@@ -74,7 +78,6 @@ export function Upgrade({ title, image, price, units, buyUpgrade }) {
           right: "30px",
           top: "50%",
           transform: "translateY(-50%)",
-
           width: "150px",
           textAlign: "right",
           whiteSpace: "nowrap",
@@ -91,6 +94,9 @@ export function Upgrade({ title, image, price, units, buyUpgrade }) {
           {units}
         </p>
       </div>
+
+      {/* DESCRIPTION */}
+      {show && <div></div>}
     </div>
   );
 }

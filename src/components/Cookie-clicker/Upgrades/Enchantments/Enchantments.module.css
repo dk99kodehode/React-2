@@ -4,20 +4,51 @@
   border-radius: 12px;
   width: 58px;
   height: 42px;
+  cursor: pointer;
+}
+
+.border:hover {
+  background-color: rgb(167, 165, 165);
 }
 
 .description {
   background-color: rgba(31, 31, 30, 0.8);
   border-radius: 12px;
-  border: gold 2px solid;
+  border: rgb(228, 194, 0) 2px solid;
 
   top: 50px;
   right: 380px;
   position: absolute;
-  width: 200px;
+  width: fit-content;
   color: white;
   z-index: 2;
-  height: 80px;
+  height: fit-content;
 
   place-items: center;
+}
+
+.upgradeRow {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.upgradeRow img {
+  width: 40px;
+}
+
+.upgrade {
+  font-size: 10px;
+  background-color: rgb(160, 156, 156);
+  padding: 0px 1px;
+  border-radius: 3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price {
+  margin-left: auto;
+  color: gold;
 }

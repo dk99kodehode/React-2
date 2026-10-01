@@ -3,7 +3,7 @@ import ReinforcedCursor from "../Enchantments/Reinforced.png";
 import { useState } from "react";
 
 export default function Enchantments({ title, price }) {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
 
   return (
     <div
@@ -18,16 +18,34 @@ export default function Enchantments({ title, price }) {
       {show && (
         <>
           <div className={styles.description}>
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              <img
-                style={{ width: "1000px" }}
-                src={ReinforcedCursor}
-                alt={title}
-              />
+            <div className={styles.upgradeRow}>
+              <img src={ReinforcedCursor} alt={title} />
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <p className={styles.Icon}>Cursor</p>
+                <p className={styles.upgrade}>Upgrade</p>
+              </div>
+              <p className={styles.price}>30🍪</p>
             </div>
 
-            <div style={{ display: "flex" }}>
-              <h4>Cursor Upgrade</h4>
+            <div>
+              <p
+                style={{
+                  fontSize: "16px",
+                }}
+              >
+                The mouse and cursors are twice as efficient.
+              </p>
+              <p
+                style={{
+                  fontSize: "12px",
+                }}
+              >
+                "Prod Prod"
+              </p>
+            </div>
+
+            <div>
+              <p style={{ fontSize: "10px" }}>Click to purchase</p>
             </div>
           </div>
         </>
