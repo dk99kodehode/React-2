@@ -60,7 +60,7 @@ export function Upgrade({ title, image, price, units, buyUpgrade }) {
           style={{
             color: "gold",
             margin: 0,
-            fontSize: "15px",
+            fontSize: "18px",
           }}
         >
           {`🍪${price}`}

@@ -1,6 +1,8 @@
 .stats {
   font-size: 38px;
   text-shadow: 0 0 10px #fff;
+  padding-bottom: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .overhead {
   font-size: 32px;
@@ -11,12 +13,6 @@
   font-size: 18px;
 }
 
-.general {
-  float: left;
-
-  overflow: hidden;
-}
-
 .page {
   background-image: url(../CookieAssets/Wood/DarkenedWood.png);
   overflow-y: auto;
@@ -24,19 +20,21 @@
 }
 
 .exit {
-  background-color: rgba(0, 0, 0, 1);
-  margin-top: 2%;
-  margin-left: 86%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
 
+  top: 32%;
+  right: 26%;
   border: none;
   color: white;
   border-radius: 16%;
-  padding-left: 12px;
+  padding: 0 12px 0 12px;
   cursor: pointer;
   text-align: center;
 }
 
 .exit:hover {
-  scale: 1.02;
-  border: solid 2px white;
+  border: solid 1px rgb(186, 183, 183);
+  background-color: rgba(0, 0, 0, 1);
+  scale: 1.1;
 }
