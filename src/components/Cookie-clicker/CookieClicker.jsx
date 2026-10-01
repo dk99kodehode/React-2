@@ -3,9 +3,11 @@ import { useState, useEffect } from "react";
 import styles from "./Cookie.module.css";
 
 // components and styling
-import Cookie from "../../assets/cookie.png";
+import Cookie from "../Cookie-clicker/CookieAssets/cookie.png";
 import Store from "./Store/Store.jsx";
 import Farms from "./Farms/Farms.jsx";
+
+import DropCookie from "./DropCookie.jsx";
 
 export default function CookieClicker() {
   // Current spendable cookies
@@ -76,6 +78,7 @@ export default function CookieClicker() {
         </div>
 
         <div className={styles.CCcontainer}>
+          <DropCookie></DropCookie>
           <div className={styles.Radiant}>
             <img
               className={styles.cookie}
