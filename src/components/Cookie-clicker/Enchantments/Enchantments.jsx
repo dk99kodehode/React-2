@@ -1,5 +1,5 @@
 import styles from "./Enchantments.module.css";
-import ReinforcedCursor from "../Enchantments/Reinforced.png";
+import ReinforcedCursor from "./Reinforced.png";
 import { useState } from "react";
 
 export default function Enchantments({ title, price }) {

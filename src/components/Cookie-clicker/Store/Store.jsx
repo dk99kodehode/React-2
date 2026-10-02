@@ -3,7 +3,7 @@ import storestyles from "./Store.module.css";
 
 import { Upgrade } from "../Upgrades/Upgrade.jsx";
 import { upgrades } from "../Upgrades/upgrades.jsx";
-import Enchantments from "../Upgrades/Enchantments/Enchantments.jsx";
+import Enchantments from "../Enchantments/Enchantments.jsx";
 
 export default function Store({ count, setCount, cps, setCps }) {
   const [upgradeUnits, setUpgradeUnits] = useState(

@@ -1,16 +1,14 @@
 .container {
   position: absolute;
-  left: 0;
-  padding: 5px;
 
+  padding: 5px;
   width: 220px;
   height: 200px;
+  box-sizing: border-box;
 
   background-color: rgba(15, 15, 15, 0.9);
   border: 2px solid rgb(245, 143, 9);
   border-radius: 12px;
-
-  isolation: isolate;
 }
 
 .description {
@@ -23,39 +21,29 @@
   gap: 40px;
 }
 
-.description::before {
-  content: "";
-  display: block;
-  width: 95%;
-  height: 1px;
-  border: solid 1px rgb(72, 72, 72);
-  border-radius: 12px;
-}
-
+.description::before,
 .description::after {
   content: "";
   display: block;
   width: 95%;
   height: 1px;
-  border: solid 1px rgb(72, 72, 72);
+  border: 1px solid rgb(72, 72, 72);
   border-radius: 12px;
+}
+
+.description::after {
   margin-bottom: 5px;
 }
 
 .upgrade {
   font-size: 10px;
-  padding: 0 px;
-
   background-color: rgb(119, 117, 117);
-
   color: rgb(245, 242, 242);
   border-radius: 3px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
-  padding-top: 5%;
 }
 
 .price {
@@ -70,15 +58,13 @@
   width: 95%;
   height: 16px;
   margin: auto;
+
   display: flex;
-
   align-items: center;
-
   padding-left: 10px;
 }
 
 .statText {
   font-size: 8px;
-  position: absolute;
   color: white;
 }
