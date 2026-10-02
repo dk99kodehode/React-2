@@ -9,6 +9,7 @@ export function Upgrade({
   units,
   buyUpgrade,
   description,
+  cps,
 }) {
   const [show, setShow] = useState(false);
 
@@ -120,13 +121,13 @@ export function Upgrade({
           <div style={{ display: "Flex", flexDirection: "column", gap: "2px" }}>
             <div className={styles.stats}>
               <p className={styles.statText}>
-                Each {title} produces "8" cookies per second
+                Each {title} produces {cps} cookies per second
               </p>
             </div>
 
             <div className={styles.stats}>
               <p className={styles.statText}>
-                {units} {title} producing "8" per second
+                {units} {title} producing {cps * units} per second
               </p>
             </div>
 

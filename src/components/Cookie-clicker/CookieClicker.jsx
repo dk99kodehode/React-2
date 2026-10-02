@@ -7,8 +7,6 @@ import Cookie from "../Cookie-clicker/CookieAssets/cookie.png";
 import Store from "./Store/Store.jsx";
 import Farms from "./Farms/Farms.jsx";
 
-import DropCookie from "./DropCookie.jsx";
-
 export default function CookieClicker() {
   // Current spendable cookies
   const [count, setCount] = useState(0);
@@ -78,7 +76,6 @@ export default function CookieClicker() {
         </div>
 
         <div className={styles.CCcontainer}>
-          <DropCookie></DropCookie>
           <div className={styles.Radiant}>
             <img
               className={styles.cookie}

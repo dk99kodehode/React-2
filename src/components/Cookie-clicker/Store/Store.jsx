@@ -107,6 +107,7 @@ export default function Store({ count, setCount }) {
             units={upgradeUnits[index]}
             buyUpgrade={() => buyUpgrade(index)}
             description={upgrade.description}
+            cps={upgrade.cps}
           />
         ))}
       </div>
