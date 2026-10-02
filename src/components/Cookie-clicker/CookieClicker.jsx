@@ -10,6 +10,7 @@ import Farms from "./Farms/Farms.jsx";
 export default function CookieClicker() {
   // Current spendable cookies
   const [count, setCount] = useState(0);
+  const [cps, setCps] = useState(0);
 
   // Total cookies earned during the game
   const [totalCookies, setTotalCookies] = useState(0);
@@ -20,7 +21,6 @@ export default function CookieClicker() {
   const [clicked, setClicked] = useState(false);
 
   const [clickTimes, setClickTimes] = useState([]);
-  const [cps, setCps] = useState(0);
 
   // Increases Cookie Count from clicks
   const increaseCount = () => {
@@ -29,7 +29,7 @@ export default function CookieClicker() {
     setClicked(true);
 
     // Purchase power cookies
-    setCount((prevCount) => prevCount + 1);
+    setCount((prevCount) => prevCount + 100);
 
     // Lifetime cookies or Total cookies
     setTotalCookies((prevTotal) => prevTotal + 1);
@@ -93,7 +93,7 @@ export default function CookieClicker() {
 
       <Farms xp={xp} />
 
-      <Store count={count} setCount={setCount} />
+      <Store count={count} setCount={setCount} cps={cps} setCps={setCps} />
     </div>
   );
 }

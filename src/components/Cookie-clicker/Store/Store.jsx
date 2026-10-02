@@ -5,25 +5,24 @@ import { Upgrade } from "../Upgrades/Upgrade.jsx";
 import { upgrades } from "../Upgrades/upgrades.jsx";
 import Enchantments from "../Upgrades/Enchantments/Enchantments.jsx";
 
-export default function Store({ count, setCount }) {
+export default function Store({ count, setCount, cps, setCps }) {
   const [upgradeUnits, setUpgradeUnits] = useState(
     upgrades.map((upgrade) => Number(upgrade.units) || 0),
   );
 
-  const [upgradePrices, setUpgradePrices] = useState(
-    upgrades.map((upgrade) => upgrade.price),
-  );
+  const getUpgradePrice = (index) => {
+    const upgrade = upgrades[index];
+    const units = upgradeUnits[index];
+
+    return Math.ceil(upgrade.price * Math.pow(1.15, units));
+  };
 
   const buyUpgrade = (index) => {
-    const price = upgradePrices[index];
+    const upgrade = upgrades[index];
+    const units = upgradeUnits[index];
 
-    // Make sure price is actually a number
-    if (typeof price !== "number" || Number.isNaN(price)) {
-      console.error("Invalid price:", price);
-      return;
-    }
+    const price = Math.ceil(upgrade.price * Math.pow(1.15, units));
 
-    // Not enough cookies
     if (count < price) {
       console.log("Not enough cookies!");
       return;
@@ -37,12 +36,8 @@ export default function Store({ count, setCount }) {
       prevUnits.map((units, i) => (i === index ? units + 1 : units)),
     );
 
-    // Increase price by 30% can be changed with with percentile increase to desire, main goal is to increas by 1.15 + Number of Units = "1.15 + N"
-    setUpgradePrices((prevPrices) =>
-      prevPrices.map((currentPrice, i) =>
-        i === index ? Math.ceil(currentPrice * 1.3) : currentPrice,
-      ),
-    );
+    // Add CPS
+    setCps((prevCps) => prevCps + upgrade.cps);
   };
 
   return (
@@ -51,7 +46,6 @@ export default function Store({ count, setCount }) {
         <h2>STORE</h2>
       </div>
 
-      {/*-- tiny increases , upgrades--*/}
       <div className={storestyles.Increases}>
         <Enchantments />
         <Enchantments />
@@ -96,14 +90,13 @@ export default function Store({ count, setCount }) {
         </div>
       </div>
 
-      {/*-- units */}
       <div>
         {upgrades.map((upgrade, index) => (
           <Upgrade
             key={index}
             title={upgrade.name}
             image={upgrade.image}
-            price={upgradePrices[index]}
+            price={getUpgradePrice(index)}
             units={upgradeUnits[index]}
             buyUpgrade={() => buyUpgrade(index)}
             description={upgrade.description}
