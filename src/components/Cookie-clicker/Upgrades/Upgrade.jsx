@@ -2,7 +2,14 @@ import { useState } from "react";
 import UnitBackground from "../Unit/Buildings/UnitBackground.png";
 import styles from "./Upgrade.module.css";
 
-export function Upgrade({ title, image, price, units, buyUpgrade }) {
+export function Upgrade({
+  title,
+  image,
+  price,
+  units,
+  buyUpgrade,
+  description,
+}) {
   const [show, setShow] = useState(false);
 
   return (
@@ -102,15 +109,32 @@ export function Upgrade({ title, image, price, units, buyUpgrade }) {
           <div className={styles.upgradeRow}>
             <img src={image} alt={title} />
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <p className={styles.upgrade}>Owned {units}</p>
+              <p className={styles.upgrade}>Owned: {units}</p>
             </div>
+
             <p className={styles.price}>${price}🍪</p>
           </div>
 
+          <p className={styles.description}>{description}</p>
+
           <div style={{ display: "Flex", flexDirection: "column", gap: "2px" }}>
-            <div className={styles.stats}></div>
-            <div className={styles.stats}></div>
-            <div className={styles.stats}></div>
+            <div className={styles.stats}>
+              <p className={styles.statText}>
+                Each {title} produces "8" cookies per second
+              </p>
+            </div>
+
+            <div className={styles.stats}>
+              <p className={styles.statText}>
+                {units} {title} producing "8" per second
+              </p>
+            </div>
+
+            <div className={styles.stats}>
+              <p className={styles.statText}>
+                __ , __ cookies harvested so far
+              </p>
+            </div>
           </div>
 
           <div>

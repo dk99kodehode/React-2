@@ -29,6 +29,8 @@ export const upgrades = [
     price: 15,
     cps: 0.1,
     units: 0,
+
+    description: "Auto clicks every 10 seconds",
   },
   {
     name: "Grandma",
@@ -36,6 +38,8 @@ export const upgrades = [
     price: 100,
     cps: 1,
     units: 0,
+
+    description: "A nice grandma to bake more cookies",
 
     background: GrandmaBck,
   },
@@ -46,6 +50,7 @@ export const upgrades = [
     cps: 8,
     units: 0,
 
+    description: "Grows cookie plants from cookie seeds",
     background: FarmBck,
   },
   {
@@ -55,6 +60,7 @@ export const upgrades = [
     cps: 47,
     units: 0,
 
+    description: "Mine out cookie dough and chocolate chips",
     background: MineBck,
   },
   {
@@ -64,6 +70,7 @@ export const upgrades = [
     cps: 260,
     units: 0,
 
+    description: "Produce large quantity of cookies",
     background: FactoryBck,
   },
   {

@@ -55,6 +55,10 @@ export default function Store({ count, setCount }) {
       <div className={storestyles.Increases}>
         <Enchantments />
         <Enchantments />
+        <Enchantments />
+        <Enchantments />
+        <Enchantments />
+        <Enchantments />
       </div>
 
       <div
@@ -102,6 +106,7 @@ export default function Store({ count, setCount }) {
             price={upgradePrices[index]}
             units={upgradeUnits[index]}
             buyUpgrade={() => buyUpgrade(index)}
+            description={upgrade.description}
           />
         ))}
       </div>
